@@ -13,6 +13,13 @@ body {
     background-color: #f0eeee;
 }
 
+#root {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
 a {
     text-decoration: none;
     color: inherit;

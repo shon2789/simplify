@@ -3,7 +3,8 @@ import { utilService } from "../../../services/util.service.js";
 export const mailService = {
     query,
     getMailById,
-    deleteMail
+    deleteMail,
+    ToggleStar
 }
 
 const gEmails = [
@@ -15,6 +16,7 @@ const gEmails = [
         isRead: false,
         sentAt: 155114120594,
         to: 'shon@simplify.com',
+        isStarred: false,
     },
     {
         id: utilService.makeId(),
@@ -23,21 +25,33 @@ const gEmails = [
         body: 'Would love to catch up sometimes',
         isRead: true,
         sentAt: 1551133930594,
-        to: 'shon@simplify.com'
+        to: 'shon@simplify.com',
+        isStarred: false,
     }
 ]
 
 function query(filterBy) {
     if (filterBy) {
-        let { txt } = filterBy
-        txt.toUpperCase();
-        console.log(txt)
-        const mailsToShow = gEmails.filter(mail => {
-            mail.subject.toLowerCase();
-            console.log(mail.subject.toLowerCase())
-            return mail.subject.includes(txt)
-        })
-        return Promise.resolve(mailsToShow)
+
+        switch (filterBy.status) {
+            case 'inbox':
+                return Promise.resolve(gEmails);
+            case 'starred':
+                const mailsToShow = gEmails.filter(mail => {
+                    return mail.isStarred;
+                });
+                return Promise.resolve(mailsToShow);
+        }
+
+        // let { txt } = filterBy
+        // txt.toUpperCase();
+        // console.log(txt)
+        // const mailsToShow = gEmails.filter(mail => {
+        //     mail.subject.toLowerCase();
+        //     console.log(mail.subject.toLowerCase())
+        //     return mail.subject.includes(txt)
+        // })
+        // return Promise.resolve(mailsToShow)
     }
 
     return Promise.resolve(gEmails)
@@ -55,5 +69,13 @@ function deleteMail(mailId) {
         return mailId === mail.id
     })
     gEmails.splice(mailIdx, 1)
+    return Promise.resolve()
+}
+
+function ToggleStar(mailId) {
+    var mailIdx = gEmails.findIndex(function (mail) {
+        return mailId === mail.id
+    })
+    gEmails[mailIdx].isStarred = !gEmails[mailIdx].isStarred;
     return Promise.resolve()
 }

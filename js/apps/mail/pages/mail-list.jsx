@@ -3,40 +3,44 @@ import { MailPreview } from "../cmps/mail-preview.jsx";
 import { mailService } from "../sevices/mail.service.js";
 
 export class MailList extends React.Component {
-    state = {
-        mails: null,
-        filterBy: {
-            txt: '',
-        },
-    }
+    // state = {
+    //     mails: null,
+    //     filterBy: {
+    //         status: '',
+    //         txt: '',
+    //         isRead: false,
+    //         isStarred: false,
+
+    //     },
+    // }
 
 
 
-    componentDidMount() {
-        this.loadMails();
-    }
+    // componentDidMount() {
+    //     this.loadMails();
+    // }
 
-    loadMails = () => {
-        mailService.query(this.state.filterBy).then(mails => {
-            this.setState({ mails });
-        })
-    }
+    // loadMails = () => {
+    //     mailService.query(this.state.filterBy).then(mails => {
+    //         this.setState({ mails });
+    //     })
+    // }
 
-    onSetFilter = (txt) => {
-        this.setState({ filterBy: txt }, this.loadMails);
-    }
+    // onSetFilter = (txt) => {
+    //     this.setState({ filterBy: txt }, this.loadMails);
+    // }
 
 
     render() {
-        const { mails } = this.state;
+        const { mails } = this.props;
         console.log(mails);
         if (!mails) return <div>Loading...</div>
         return (
             <section className="mails-container ">
                 <div className="form-container">
-                    <MailFilter onSetFilter={this.onSetFilter} />
+                    <MailFilter onSetFilter={this.props.onSetFilter} />
                 </div>
-                {mails && mails.map(mail => <MailPreview key={mail.id} mail={mail} />)}
+                {mails && mails.map(mail => <MailPreview loadMails={this.props.loadMails} key={mail.id} mail={mail} />)}
             </section>
         )
     }

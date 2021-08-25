@@ -43,3 +43,15 @@
 .form-container {
     margin-top: 2rem;
 }
+
+.mail-star {
+    color: rgb(188, 188, 188);
+}
+
+.mail-star:hover {
+    color: rgb(235, 229, 57);
+}
+
+.mail-star.active-star {
+    color: rgb(235, 229, 57);
+}

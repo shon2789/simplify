@@ -21,8 +21,8 @@ export function App() {
           <Route path="/mail" component={MailApp} />
           <Route path="/" component={AppHome} />
         </Switch>
-        <Footer />
       </section>
+      <Footer />
     </Router>
   );
 }
