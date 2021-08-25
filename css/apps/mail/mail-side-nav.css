@@ -1,6 +1,6 @@
 .mail-side-nav {
     width: 19.375rem;
-    height: calc(100vh - 15rem);
+    min-height: calc(100vh - 15rem);
     background-color: #F2C16B;
     display: flex;
     flex-direction: column;
