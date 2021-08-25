@@ -42,11 +42,13 @@ export class MailDetails extends React.Component {
                             <h4>Subject: {mail.subject}</h4>
                         </div>
                         <div className="mail-delete-container">
-                            <button onClick={this.onDeleteMail}>Delete Mail</button>
+                            {/* <button onClick={this.onDeleteMail}>Delete Mail</button> */}
+
                         </div>
                     </div>
                     <div className="mail-content-body">
                         <p>{mail.body}</p>
+                        <i onClick={this.onDeleteMail} className="delete-mail fas fa-trash"></i>
                     </div>
                 </div>
             </section>

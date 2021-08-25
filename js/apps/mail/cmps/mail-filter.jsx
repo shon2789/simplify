@@ -1,3 +1,5 @@
+import { mailService } from "../sevices/mail.service.js";
+
 export class MailFilter extends React.Component {
     state = {
         filterBy: {
@@ -8,8 +10,9 @@ export class MailFilter extends React.Component {
     handleChange = ({ target }) => {
         const field = target.name;
         const value = target.type === 'number' ? +target.value : target.value;
-        this.setState({ filterBy: { ...this.state.filterBy, [field]: value } },
-        );
+        this.setState({ filterBy: { ...this.state.filterBy, [field]: value } }, () => {
+            this.props.onSetFilter(this.state.filterBy)
+        });
     };
 
     render() {

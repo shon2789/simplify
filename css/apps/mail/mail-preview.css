@@ -1,9 +1,9 @@
 .mail-preview {
-    min-width: 30rem;
+    /* min-width: 40rem; */
     display: flex;
     justify-content: space-between;
     gap: 2rem;
-    border: 1px solid #292929;
+    border: 1px solid #29292914;
     padding: 0.5rem;
 }
 
@@ -38,4 +38,8 @@
     margin-bottom: 3rem;
     outline: none;
     font-size: 1.2rem;
+}
+
+.form-container {
+    margin-top: 2rem;
 }
