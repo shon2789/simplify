@@ -9,6 +9,10 @@ html {
     font-family: Lato-Regular, Sans-serif;
 }
 
+body {
+    background-color: #f0eeee;
+}
+
 a {
     text-decoration: none;
     color: inherit;
