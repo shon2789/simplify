@@ -1,0 +1,67 @@
+.cards-main-container {
+    height: 80vh;
+}
+
+.cards-header-title {
+    font-size: 6rem;
+    text-align: center;
+    color: #292929;
+}
+
+.cards-content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card {
+    width: 25rem;
+    height: 26.875rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #292929;
+    border-radius: 20px;
+    animation: revealSlow 0.8s ease-in-out;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4.375rem;
+    width: 100%;
+}
+
+.card svg {
+    margin-top: 1.875rem;
+    width: 7.8125rem;
+    height: 7.8125rem;
+}
+
+.card p {
+    color: #f0eeee;
+    font-size: 1.5rem;
+}
+
+.learn-more-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 11rem;
+    height: 3.25rem;
+    border-radius: 10px;
+    background-color: #F2C16B;
+    margin-bottom: 1.875rem;
+    font-size: 1.5rem;
+    color: #292929;
+}
+
+@keyframes revealSlow {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

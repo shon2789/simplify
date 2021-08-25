@@ -1,0 +1,28 @@
+@import "home-hero.css";
+@import "home-cards.css";
+.main-section {
+    background-color: #292929;
+    position: relative;
+    height: 85vh;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave svg {
+    fill: white;
+    position: relative;
+    display: block;
+    width: calc(116% + 1.3px);
+    height: 164px;
+}
+
+.wave.shape-fill {
+    fill: #ffffff;
+}

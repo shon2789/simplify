@@ -1,0 +1,29 @@
+@font-face {
+    font-family: Lato-Regular;
+    src: url(../../assets/fonts/Lato/Lato-Regular.ttf);
+}
+
+@font-face {
+    font-family: Lato-Light;
+    src: url(../../assets/fonts/Lato/Lato-Light.ttf);
+}
+
+@font-face {
+    font-family: Lato-Bold;
+    src: url(../../assets/fonts/Lato/Lato-Bold.ttf);
+}
+
+@font-face {
+    font-family: Lato-Thin;
+    src: url(../../assets/fonts/Lato/Lato-Thin.ttf);
+}
+
+@font-face {
+    font-family: Kalam-Light;
+    src: url(../../assets/fonts/Kalam/Kalam-Light.ttf);
+}
+
+@font-face {
+    font-family: Manjari-Regular;
+    src: url(../../assets/fonts/Manjari/Manjari-Regular.ttf);
+}

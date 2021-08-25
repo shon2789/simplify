@@ -1,0 +1,15 @@
+.footer {
+    background-color: #292929;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7.5rem;
+    color: #F2C16B;
+    margin-left: 1rem;
+}

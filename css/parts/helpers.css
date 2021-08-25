@@ -1,0 +1,12 @@
+/* FLEX */
+
+.flex {
+    display: flex;
+}
+
+/* MAIN LAYOUT */
+
+.main-layout {
+    width: 1440px;
+    margin: 0 auto;
+}

@@ -1,0 +1,35 @@
+.header {
+    background-color: #292929;
+    display: flex;
+    justify-content: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    height: 7.5rem;
+    font-size: 3rem;
+    font-family: Kalam-Light;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+    color: #F2C16B;
+    cursor: pointer;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+}
+
+.nav-container>:not(:last-child) {
+    padding-right: 2rem;
+}
+
+.nav-link.active path {
+    fill: #F2C16B;
+}
