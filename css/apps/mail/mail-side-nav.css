@@ -1,0 +1,38 @@
+.mail-side-nav {
+    width: 19.375rem;
+    height: calc(100vh - 15rem);
+    background-color: #F2C16B;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.mail-side-nav .side-nav-inbox {
+    margin-top: 3.125rem;
+}
+
+.mail-side-nav div {
+    font-family: Lato-Bold;
+    font-size: 1.5rem;
+    color: #292929;
+    margin-left: 1.25rem;
+    display: flex;
+}
+
+i {
+    font-size: 1.5rem;
+    color: #292929;
+    margin-right: 1rem;
+}
+
+i.active-white {
+    color: #f0eeee;
+}
+
+.side-nav-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}

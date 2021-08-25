@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import '../css/parts/fonts.css';
 @import '../css/parts/base.css';
 @import '../css/parts/helpers.css';
@@ -5,3 +6,12 @@
 @import '../css/cmps/app-home.css';
 @import '../css/cmps/footer.css';
 @import '../css/apps/keep/note.css';
+=======
+@import "../css/parts/fonts.css";
+@import "../css/parts/base.css";
+@import "../css/parts/helpers.css";
+@import "../css/cmps/header.css";
+@import "../css/cmps/app-home.css";
+@import "../css/cmps/footer.css";
+@import "../css/apps/mail/mail.css"
+>>>>>>> a794acfa73d1d5945f9e9d491cbd688d8a754624
