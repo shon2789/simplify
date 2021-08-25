@@ -1,3 +1,7 @@
-@import '../keep/note-filter.css';
-@import '../keep/note-preview.css';
-@import '../keep/note-list.css';
+@import "../keep/note-filter.css";
+@import "../keep/note-preview.css";
+@import "../keep/note-list.css";
+
+.keep-app {
+  height: calc(100vh - 15rem);
+}
