@@ -140,7 +140,7 @@ function addNote(note) {
       type: note.type,
       isPinned: false,
       info: {
-        url: note.url,
+        url: note.txt,
         title: "",
       },
     }
