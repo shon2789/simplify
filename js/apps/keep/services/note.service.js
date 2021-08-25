@@ -12,7 +12,7 @@ let gNotes = [
   {
     id: "n101",
     type: "note-txt",
-    isPinned: true,
+    isPinned: false,
     info: {
       txt: "Fullstack Me Baby! ",
     },
@@ -20,6 +20,7 @@ let gNotes = [
   {
     id: "n102",
     type: "note-img",
+    isPinned: false,
     info: {
       url: "https://images.unsplash.com/photo-1508919801845-fc2ae1bc2a28?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aW1nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80",
       title: "Bobi and Me",
@@ -31,6 +32,7 @@ let gNotes = [
   {
     id: "n103",
     type: "note-todos",
+    isPinned: false,
     info: {
       label: "Get my stuff together",
       todos: [
@@ -42,6 +44,7 @@ let gNotes = [
   {
     id: "n104",
     type: "note-todos",
+    isPinned: false,
     info: {
       label: "Get my stuff together",
       todos: [
@@ -53,6 +56,7 @@ let gNotes = [
   {
     id: "n105",
     type: "note-todos",
+    isPinned: false,
     info: {
       label: "Get my stuff together",
       todos: [
@@ -64,6 +68,7 @@ let gNotes = [
   {
     id: "n106",
     type: "note-todos",
+    isPinned: false,
     info: {
       label: "Get my stuff together",
       todos: [
@@ -75,6 +80,7 @@ let gNotes = [
   {
     id: "n107",
     type: "note-todos",
+    isPinned: false,
     info: {
       label: "Get my stuff together",
       todos: [
@@ -117,17 +123,50 @@ function deleteNote(noteId) {
 }
 
 function addNote(note) {
-  const newNote = {
-    id: utilService.makeId(),
-    type: note.type,
-    isPinned: false,
-    info: {
-      txt: note.txt,
-    },
+  let newNote
+  if (note.type === "note-txt") {
+    newNote = {
+      id: utilService.makeId(),
+      type: note.type,
+      isPinned: false,
+      info: {
+        txt: note.txt,
+      },
+    }
   }
+  if (note.type === "note-img") {
+    newNote = {
+      id: utilService.makeId(),
+      type: note.type,
+      isPinned: false,
+      info: {
+        url: note.url,
+        title: "",
+      },
+    }
+  }
+  if (note.type === "note-todos") {
+    const enteredTodos = note.txt.split(",")
+    const formattedTodos = []
 
+    enteredTodos.forEach((todo) => {
+      console.log(todo)
+      formattedTodos.push({ txt: todo, doneAt: null })
+    })
+    console.log(formattedTodos)
+    newNote = {
+      id: utilService.makeId(),
+      type: note.type,
+      isPinned: false,
+      info: {
+        label: "",
+        todos: formattedTodos,
+      },
+    }
+  }
   gNotes.push(newNote)
   _saveNotesToStorage()
+  return Promise.resolve()
 }
 
 function _saveNotesToStorage() {

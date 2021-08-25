@@ -1,8 +1,11 @@
+import { noteService } from "../services/note.service.js"
+
 export class NoteFilter extends React.Component {
   state = {
     note: {
       type: "note-txt",
       txt: "",
+      url: "",
     },
   }
 
@@ -15,9 +18,25 @@ export class NoteFilter extends React.Component {
     this.setState({ note: { ...this.state.note, ["txt"]: txt } })
   }
 
+  getPlaceHolderTxt = () => {
+    if (this.state.note.type === "note-txt") return "Enter a note..."
+    if (this.state.note.type === "note-img") return "Enter image URL..."
+    if (this.state.note.type === "note-todos") {
+      return "Enter comma separated list..."
+    }
+  }
+
+  onAddNote = (note) => {
+    if (!note.txt) return
+
+    noteService.addNote(note)
+    this.setState({ note: { ...this.state.note, ["txt"]: "" } })
+    this.props.loadNotes()
+  }
+
   render() {
     const { onAddNote } = this.props
-    let { txt, type } = this.state.note
+    let { txt } = this.state.note
 
     return (
       <div className="note-filter">
@@ -25,7 +44,7 @@ export class NoteFilter extends React.Component {
           <input
             className="note-input"
             type="text"
-            placeholder="Take a note..."
+            placeholder={this.getPlaceHolderTxt()}
             value={txt}
             onChange={this.onValueChange}
           />
@@ -50,7 +69,7 @@ export class NoteFilter extends React.Component {
         </div>
         <div
           onClick={() => {
-            onAddNote(this.state.note)
+            this.onAddNote(this.state.note)
           }}
           className="note-add-btn"
         >

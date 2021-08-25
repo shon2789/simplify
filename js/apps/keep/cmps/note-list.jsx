@@ -17,18 +17,13 @@ export class NoteList extends React.Component {
     })
   }
 
-  onAddNote = (note) => {
-    noteService.addNote(note)
-    // this.loadNotes()
-  }
-
   render() {
     const { notes } = this.state
     if (!notes) return <div>Loading...</div>
 
     return (
       <section className="note-list">
-        <NoteFilter onAddNote={this.onAddNote} />
+        <NoteFilter loadNotes={this.loadNotes} />
         <div className="notes-cards-container ">
           {notes.map((note) => {
             return <NotePreview key={note.id} note={note} />
