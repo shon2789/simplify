@@ -1,8 +1,7 @@
 export class BookApp extends React.Component {
-
     render() {
         return (
-            <section>Book</section>
+            <section className="book-app-container">Book</section>
         )
     }
 }

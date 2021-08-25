@@ -56,7 +56,7 @@
     cursor: pointer;
 }
 
-.delete-mail {
+.delete-mail-details {
     color: #e34d4d;
     position: absolute;
     bottom: 2.5rem;
@@ -67,6 +67,6 @@
     transition: opacity 0.4s;
 }
 
-.delete-mail:hover {
+.delete-mail-details:hover {
     opacity: 1;
 }
