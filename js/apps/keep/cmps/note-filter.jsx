@@ -21,13 +21,14 @@ export class NoteFilter extends React.Component {
   getPlaceHolderTxt = () => {
     if (this.state.note.type === "note-txt") return "Enter a note..."
     if (this.state.note.type === "note-img") return "Enter image URL..."
+    if (this.state.note.type === "note-video") return "Enter video URL..."
     if (this.state.note.type === "note-todos") {
       return "Enter comma separated list..."
     }
   }
 
   onAddNote = (note) => {
-    if (!note.txt) return
+    if (!note.txt || !note.txt.indexOf(" ")) return
 
     noteService.addNote(note)
     this.setState({ note: { ...this.state.note, ["txt"]: "" } })
@@ -35,7 +36,6 @@ export class NoteFilter extends React.Component {
   }
 
   render() {
-    const { onAddNote } = this.props
     let { txt } = this.state.note
 
     return (
@@ -65,6 +65,12 @@ export class NoteFilter extends React.Component {
               this.changeNoteType("note-txt")
             }}
             className="fas fa-font text-icon"
+          ></i>
+          <i
+            onClick={() => {
+              this.changeNoteType("note-video")
+            }}
+            className="fas fa-video video-icon"
           ></i>
         </div>
         <div

@@ -7,8 +7,10 @@
   padding-inline-start: 1rem;
   padding-block-end: 2.8rem;
   padding-top: 1rem;
+  margin-bottom: 1rem;
 
   overflow-wrap: break-word;
+  break-inside: avoid-column;
 
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
     rgba(0, 0, 0, 0.08) 0px 0px 0px;
@@ -31,4 +33,14 @@
   cursor: pointer;
   right: 0;
   font-size: 1rem;
+}
+
+.todo-container {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.todo-container p.active {
+  text-decoration: line-through;
 }

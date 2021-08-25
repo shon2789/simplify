@@ -44,13 +44,16 @@
 }
 
 .input-container .images-icon {
-  right: 0;
+  right: 45px;
 }
 
 .input-container .check-box {
-  right: 50px;
+  right: 92px;
 }
 
 .input-container .text-icon {
-  right: 92px;
+  right: 130px;
+}
+.input-container .video-icon {
+  right: 0;
 }

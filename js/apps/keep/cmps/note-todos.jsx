@@ -1,8 +1,10 @@
 import { noteService } from "../services/note.service.js"
 
-export function NoteTodos({ label, todos }) {
-  const handleTodos = (a, s) => {
-    console.log(a)
+export function NoteTodos({ label, todos, id, loadNotes }) {
+  const handleTodos = (todo, todoIdx, noteId) => {
+    const isDone = todo.doneAt
+    noteService.removeTodo(isDone, todoIdx, noteId)
+    loadNotes()
   }
 
   return (
@@ -13,11 +15,11 @@ export function NoteTodos({ label, todos }) {
           <div
             key={idx}
             onClick={() => {
-              handleTodos(todo, idx)
+              handleTodos(todo, idx, id)
             }}
             className="todo-container"
           >
-            {todo.txt}
+            <p className={`${todo.doneAt ? "active" : ""}`}>{todo.txt}</p>
             {!todo.doneAt && <i className="far fa-square check-box"></i>}
             {todo.doneAt && <i className="fas fa-check-square check-box"></i>}
           </div>

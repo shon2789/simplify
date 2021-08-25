@@ -1,3 +1,4 @@
+import { func } from "prop-types"
 import { storageService } from "../../../services/storage.service.js"
 import { utilService } from "../../../services/util.service.js"
 
@@ -6,6 +7,7 @@ export const noteService = {
   getNoteById,
   deleteNote,
   addNote,
+  removeTodo,
 }
 
 let gNotes = [
@@ -145,6 +147,16 @@ function addNote(note) {
       },
     }
   }
+  if (note.type === "note-video") {
+    newNote = {
+      id: utilService.makeId(),
+      type: note.type,
+      isPinned: false,
+      info: {
+        url: note.txt,
+      },
+    }
+  }
   if (note.type === "note-todos") {
     const enteredTodos = note.txt.split(",")
     const formattedTodos = []
@@ -167,6 +179,15 @@ function addNote(note) {
   gNotes.push(newNote)
   _saveNotesToStorage()
   return Promise.resolve()
+}
+
+function removeTodo(isTodoDone, todoIdx, noteId) {
+  const noteIdx = gNotes.findIndex((note) => {
+    return noteId === note.id
+  })
+
+  gNotes[noteIdx].info.todos[todoIdx].doneAt = !isTodoDone
+  _saveNotesToStorage()
 }
 
 function _saveNotesToStorage() {

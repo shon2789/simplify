@@ -26,7 +26,13 @@ export class NoteList extends React.Component {
         <NoteFilter loadNotes={this.loadNotes} />
         <div className="notes-cards-container ">
           {notes.map((note) => {
-            return <NotePreview key={note.id} note={note} />
+            return (
+              <NotePreview
+                key={note.id}
+                note={note}
+                loadNotes={this.loadNotes}
+              />
+            )
           })}
         </div>
       </section>
