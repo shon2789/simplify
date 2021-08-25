@@ -1,3 +1,5 @@
+import { Envelope } from './envelope-svg.jsx'
+
 export function Hero() {
 
     return (
@@ -10,7 +12,7 @@ export function Hero() {
             </div>
 
             <div className="hero-img">
-                <img src="../../../assets/img/envelope.svg" alt="" />
+                <Envelope />
             </div>
         </div>
 
