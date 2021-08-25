@@ -10,7 +10,7 @@ export function Hero() {
             </div>
 
             <div className="hero-img">
-                <img src="../assets/img/envelope.svg" alt="" />
+                <img src="../../../assets/img/envelope.svg" alt="" />
             </div>
         </div>
 
