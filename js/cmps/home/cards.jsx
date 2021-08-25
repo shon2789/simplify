@@ -2,6 +2,7 @@ import { BookSvg } from "../book-svg.jsx"
 import { KeepSvg } from "../keep-svg.jsx"
 import { MailSvg } from "../header/mail-svg.jsx"
 
+const { Link } = ReactRouterDOM;
 
 export function Cards() {
     return (
@@ -15,17 +16,17 @@ export function Cards() {
                         <MailSvg />
                         <p>My Mail</p>
 
-                        <div className="learn-more-btn">Learn More</div>
+                        <Link to="/mail"><div className="learn-more-btn">Learn More</div></Link>
                     </div>
                     <div className="card">
                         <KeepSvg />
                         <p>My Notes</p>
-                        <div className="learn-more-btn">Learn More</div>
+                        <Link to="/keep"><div className="learn-more-btn">Learn More</div></Link>
                     </div>
                     <div className="card">
                         <BookSvg />
                         <p>My Books</p>
-                        <div className="learn-more-btn">Learn More</div>
+                        <Link to="/book"><div className="learn-more-btn">Learn More</div></Link>
 
                     </div>
                 </div>
