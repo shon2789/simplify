@@ -1,1 +1,7 @@
-@import 'mail-side-nav.css'
+@import 'mail-side-nav.css';
+@import 'mail-index.css';
+@import 'mail-preview.css';
+@import 'mail-details.css';
+.mail-main-container {
+    display: flex;
+}

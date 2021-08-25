@@ -1,3 +1,4 @@
+import { MailDetails } from './apps/mail/pages/mail-details.jsx';
 import { Footer } from './cmps/footer/footer.jsx';
 import { Header } from './cmps/header/header.jsx';
 import { AppHome } from './pages/app-home.jsx';
@@ -14,6 +15,7 @@ export function App() {
       <Header />
       <section className="app">
         <Switch>
+          <Route path="/mail/:mailId" component={MailDetails} />
           <Route path="/book" component={BookApp} />
           <Route path="/keep" component={KeepApp} />
           <Route path="/mail" component={MailApp} />

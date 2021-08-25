@@ -4,11 +4,15 @@
     background-color: #F2C16B;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .mail-side-nav .side-nav-inbox {
     margin-top: 3.125rem;
+}
+
+.side-nav {
+    cursor: pointer;
 }
 
 .mail-side-nav div {
@@ -35,4 +39,51 @@ i.active-white {
     display: flex;
     justify-content: center;
     align-self: center;
+}
+
+.side-nav.active {
+    background-color: #292929;
+    margin-left: 0;
+    color: #f0eeee;
+    padding: 1.2rem;
+    border-radius: 0px 30px 30px 0px;
+}
+
+.side-nav.active i {
+    color: #f0eeee;
+}
+
+/* .side-nav:hover.side-nav {
+    background-color: #292929;
+    margin-left: 0;
+    color: #f0eeee;
+    padding-left: 1.2rem;
+    border-radius: 0px 30px 30px 0px;
+}
+
+.side-nav:hover i {
+    color: #f0eeee;
+} */
+
+.side-nav-compose {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14rem;
+    height: 4rem;
+    margin-top: 2rem;
+    border-radius: 1.5rem;
+    background-color: #292929;
+    color: #f0eeee;
+    font-size: 1.5rem;
+}
+
+.side-nav-compose i {
+    color: #f0eeee;
+}
+
+.compose-container {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
 }

@@ -1,0 +1,55 @@
+.mail-details {
+    height: calc(100vh - 15rem);
+    display: flex;
+    /* height: calc(100vh - 16rem); */
+    /* height: 100vh; */
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.mail-content {
+    min-width: 40rem;
+    /* min-height: 30rem; */
+    margin: 2rem 0;
+    /* display: flex; */
+    /* padding: 1rem; */
+    border: 1px solid #292929;
+    /* max-height: 40rem; */
+    background-color: rgb(230, 230, 230);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.mail-content-head {
+    background-color: #292929;
+    color: #f0eeee;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mail-content-body {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    font-size: 2rem;
+    /* padding: 2rem; */
+}
+
+.mail-delete-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mail-delete-container button {
+    cursor: pointer;
+    padding: 0.5rem;
+    border: none;
+    font-family: Lato-Bold;
+}
+
+.go-back {
+    margin-top: 2rem;
+    align-self: flex-start;
+    font-size: 2rem;
+    cursor: pointer;
+}

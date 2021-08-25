@@ -3,7 +3,8 @@ export const utilService = {
     makeLorem,
     getRandomIntInclusive,
     getDate,
-    debounce
+    debounce,
+    getFormattedDate
 }
 
 function makeId(length = 6) {
@@ -47,4 +48,12 @@ function debounce(func, timeout = 300) {
         clearTimeout(timer);
         timer = setTimeout(() => { func.apply(this, args); }, timeout);
     };
+}
+
+function getFormattedDate(timestamp) {
+    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+    ];
+    const time = new Date(timestamp);
+    return (time.getDate() + ' ' + monthNames[time.getMonth()])
 }
