@@ -27,6 +27,7 @@ export class MailDetails extends React.Component {
         this.props.history.push('/mail')
     }
 
+
     render() {
         const { mail } = this.state;
         if (!mail) return <div>Loading...</div>
@@ -48,7 +49,7 @@ export class MailDetails extends React.Component {
                     </div>
                     <div className="mail-content-body">
                         <p>{mail.body}</p>
-                        <i onClick={this.onDeleteMail} className="delete-mail fas fa-trash"></i>
+                        <i onClick={this.onDeleteMail} className="delete-mail-details fas fa-trash"></i>
                     </div>
                 </div>
             </section>

@@ -55,3 +55,14 @@
 .mail-star.active-star {
     color: rgb(235, 229, 57);
 }
+
+.delete-mail {
+    color: #e34d4d;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+}
+
+.delete-mail:hover {
+    opacity: 1;
+}

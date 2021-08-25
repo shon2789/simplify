@@ -31,6 +31,7 @@ export class MailList extends React.Component {
     // }
 
 
+
     render() {
         const { mails } = this.props;
         console.log(mails);
