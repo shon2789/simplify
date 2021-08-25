@@ -1,0 +1,10 @@
+.note-preview {
+  background-color: #f0eeee;
+  border: 0.5px solid rgb(199, 199, 199);
+  width: 15rem;
+  min-height: 6.25rem;
+  border-radius: 10px;
+  padding-inline-start: 1rem;
+  padding-block-end: 2.8rem;
+  padding-top: 1rem;
+}

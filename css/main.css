@@ -1,6 +1,7 @@
-@import "../css/parts/fonts.css";
-@import "../css/parts/base.css";
-@import "../css/parts/helpers.css";
-@import "../css/cmps/header.css";
-@import "../css/cmps/app-home.css";
-@import "../css/cmps/footer.css";
+@import '../css/parts/fonts.css';
+@import '../css/parts/base.css';
+@import '../css/parts/helpers.css';
+@import '../css/cmps/header.css';
+@import '../css/cmps/app-home.css';
+@import '../css/cmps/footer.css';
+@import '../css/apps/keep/note.css';

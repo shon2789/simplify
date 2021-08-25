@@ -1,8 +1,11 @@
-export class KeepApp extends React.Component {
+import { NoteList } from '../apps/keep/cmps/note-list.jsx';
 
-    render() {
-        return (
-            <section>Kepp</section>
-        )
-    }
+export class KeepApp extends React.Component {
+  render() {
+    return (
+      <section className="keep-app main-layout">
+        <NoteList />
+      </section>
+    );
+  }
 }
