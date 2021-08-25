@@ -15,16 +15,16 @@
     cursor: pointer;
 }
 
-.mail-side-nav div {
+.mail-side-nav>*:not(:first-child) {
     font-family: Lato-Bold;
     font-size: 1.5rem;
-    color: #292929;
+    /* color: #292929; */
     margin-left: 1.25rem;
     display: flex;
 }
 
 i {
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     color: #292929;
     margin-right: 1rem;
 }
@@ -34,8 +34,8 @@ i.active-white {
 }
 
 .side-nav-icon {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.8rem;
+    height: 1.8rem;
     display: flex;
     justify-content: center;
     align-self: center;
@@ -76,14 +76,17 @@ i.active-white {
     background-color: #292929;
     color: #f0eeee;
     font-size: 1.5rem;
+    cursor: pointer;
 }
 
 .side-nav-compose i {
     color: #f0eeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .compose-container {
     display: flex;
     justify-content: center;
-    cursor: pointer;
 }

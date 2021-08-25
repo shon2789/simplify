@@ -27,7 +27,19 @@ const gEmails = [
     }
 ]
 
-function query() {
+function query(filterBy) {
+    if (filterBy) {
+        let { txt } = filterBy
+        txt.toUpperCase();
+        console.log(txt)
+        const mailsToShow = gEmails.filter(mail => {
+            mail.subject.toLowerCase();
+            console.log(mail.subject.toLowerCase())
+            return mail.subject.includes(txt)
+        })
+        return Promise.resolve(mailsToShow)
+    }
+
     return Promise.resolve(gEmails)
 }
 
