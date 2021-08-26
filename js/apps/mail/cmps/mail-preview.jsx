@@ -6,6 +6,7 @@ export class MailPreview extends React.Component {
     state = {
         isReading: false,
         isStarred: this.props.mail.isStarred,
+        mail: this.props.mail
     }
 
 
@@ -26,12 +27,20 @@ export class MailPreview extends React.Component {
         mailService.deleteMail(this.props.mail.id).then(this.props.loadMails())
     }
 
+    // markMailAsRead = () => {
+    //     this.setState({ mail: { ...this.state.mail, isRead: true } }, () => {
+    //         mailService.onReadMail(this.state.mail.id).then(() => {
+    //             this.props.loadMails();
+    //         })
+    //     })
+    // }
+
     render() {
         const { mail } = this.props;
         const { isReading, isStarred } = this.state;
         return (
-            <Link to={`/mail/${mail.id}`}>
-                <section>
+            <Link to={{ pathname: `/mail/${mail.id}`, state: this.props.loadMails }}>
+                <section onClick={this.markMailAsRead}>
                     <section onClick={this.isReading} className={`mail-preview ${(mail.isRead) ? 'read' : ''}`}>
                         <h3><i onClick={this.onToggleStar} className={`${isStarred ? 'active-star' : ''} mail-star fas fa-star`}></i><i onClick={this.onDeleteMail} className="delete-mail fas fa-trash"></i>{mail.from}</h3>
                         <p>{mail.subject}</p>

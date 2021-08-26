@@ -22,7 +22,12 @@
     line-height: 1.8;
 }
 
-.mail-content-head h1, h4 {
+.mail-content-head p {
+    align-self: flex-start;
+    font-size: 1.2rem;
+}
+
+.mail-content-head h1, h4, .mail-to {
     font-size: 1.5rem;
     letter-spacing: 1.7px;
     font-family: Lato-Light;

@@ -1,13 +1,16 @@
+import { storageService } from "../../../services/storage.service.js";
 import { utilService } from "../../../services/util.service.js";
 
 export const mailService = {
     query,
     getMailById,
     deleteMail,
-    ToggleStar
+    ToggleStar,
+    sendMail,
+    onReadMail
 }
-
-const gEmails = [
+const KEY = 'mailsDB';
+let gEmails = [
     {
         id: utilService.makeId(),
         from: 'Jonathan',
@@ -42,6 +45,17 @@ const gEmails = [
         status: 'recieved'
     }
 ]
+
+_createMails();
+
+function _createMails() {
+    let mails = storageService.loadFromStorage(KEY)
+    if (!mails || !mails.length) {
+        mails = gEmails
+    }
+    gEmails = mails
+    _saveNotesToStorage()
+}
 
 function query(filterBy) {
     console.log(filterBy);
@@ -96,6 +110,7 @@ function deleteMail(mailId) {
         return mailId === mail.id
     })
     gEmails.splice(mailIdx, 1)
+    _saveNotesToStorage()
     return Promise.resolve()
 }
 
@@ -104,5 +119,36 @@ function ToggleStar(mailId) {
         return mailId === mail.id
     })
     gEmails[mailIdx].isStarred = !gEmails[mailIdx].isStarred;
+    _saveNotesToStorage()
     return Promise.resolve()
+}
+
+function sendMail(mail) {
+    const newMail = {
+        id: utilService.makeId(),
+        from: 'You',
+        subject: mail.subject,
+        body: mail.body,
+        isRead: false,
+        sentAt: Date.now(),
+        to: mail.to,
+        isStarred: false,
+        status: 'sent'
+    }
+    gEmails.push(newMail);
+    _saveNotesToStorage()
+    return Promise.resolve();
+}
+
+function onReadMail(mailId) {
+    var mailIdx = gEmails.findIndex(function (mail) {
+        return mailId === mail.id
+    })
+    gEmails[mailIdx].isRead = true;
+    _saveNotesToStorage();
+    return Promise.resolve()
+}
+
+function _saveNotesToStorage() {
+    storageService.saveToStorage(KEY, gEmails)
 }

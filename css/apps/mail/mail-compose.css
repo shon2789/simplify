@@ -1,0 +1,82 @@
+.mail-compose {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+}
+
+.mail-compose-container {
+    border: 1px solid #292929;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.mail-compose-header-form {
+    width: 50rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container-compose input {
+    width: 100%;
+    height: 3rem;
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 1px solid #2929292c;
+    outline: none;
+    font-family: Lato-Bold;
+    font-size: 1.2rem;
+}
+
+.mail-compose-body {
+    width: 50rem;
+}
+
+.mail-compose-body textarea {
+    width: 100%;
+    min-height: 30rem;
+    padding: 0.5rem;
+    border: none;
+    resize: none;
+    font-size: 1.2rem;
+    outline: none;
+}
+
+.mail-compose-top {
+    width: 50rem;
+    background-color: #292929;
+    color: #f0eeee;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mail-compose-top h1 {
+    /* font-size: 1.2rem; */
+    font-family: Lato-Bold;
+    margin: 0;
+    padding: 0;
+}
+
+.go-back-compose {
+    align-self: flex-start;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.go-back-compose:hover {
+    opacity: 1;
+}
+
+.new-mail-send-btn {
+    color: #F2C16B;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.new-mail-send-btn:hover {
+    opacity: 1;
+}

@@ -2,6 +2,7 @@
 @import 'mail-index.css';
 @import 'mail-preview.css';
 @import 'mail-details.css';
+@import 'mail-compose.css';
 .mail-main-container {
     display: flex;
 }
