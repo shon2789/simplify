@@ -39,7 +39,7 @@ export class MailList extends React.Component {
         return (
             <section className="mails-container ">
                 <div className="form-container">
-                    <MailFilter onSetFilter={this.props.onSetFilter} />
+                    <MailFilter filterBy={this.props.filterBy} onSetFilter={this.props.onSetFilter} />
                 </div>
                 {mails && mails.map(mail => <MailPreview loadMails={this.props.loadMails} key={mail.id} mail={mail} />)}
             </section>

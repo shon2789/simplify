@@ -5,6 +5,7 @@ import { AppHome } from './pages/app-home.jsx';
 import { BookApp } from './pages/book-app.jsx';
 import { KeepApp } from './pages/keep-app.jsx';
 import { MailApp } from './pages/mail-app.jsx';
+import { MailCompose } from './apps/mail/cmps/mail-compose.jsx'
 
 const Router = ReactRouterDOM.HashRouter;
 const { Route, Switch } = ReactRouterDOM;
@@ -15,6 +16,7 @@ export function App() {
       <Header />
       <section className="app">
         <Switch>
+          <Route path="/mail/newmail" component={MailCompose} />
           <Route path="/mail/:mailId" component={MailDetails} />
           <Route path="/book" component={BookApp} />
           <Route path="/keep" component={KeepApp} />

@@ -12,49 +12,76 @@ const gEmails = [
         id: utilService.makeId(),
         from: 'Jonathan',
         subject: 'Miss you!',
-        body: 'Would love to catch up sometimes',
+        body: utilService.makeLorem(),
         isRead: false,
         sentAt: 155114120594,
         to: 'shon@simplify.com',
         isStarred: false,
+        status: 'recieved'
     },
     {
         id: utilService.makeId(),
         from: 'Raz',
         subject: 'Hello!',
-        body: 'Would love to catch up sometimes',
+        body: utilService.makeLorem(),
         isRead: true,
         sentAt: 1551133930594,
         to: 'shon@simplify.com',
         isStarred: false,
+        status: 'sent'
+    },
+    {
+        id: utilService.makeId(),
+        from: 'Dana',
+        subject: 'Have you seen my post?',
+        body: utilService.makeLorem(),
+        isRead: true,
+        sentAt: 1551133930594,
+        to: 'shon@simplify.com',
+        isStarred: false,
+        status: 'recieved'
     }
 ]
 
 function query(filterBy) {
+    console.log(filterBy);
     if (filterBy) {
+        let { txt } = filterBy
+        txt.toUpperCase();
+        const txtFilteredMails = gEmails.filter(mail => {
+            return mail.subject.toLowerCase().includes(txt)
+        })
+        var mails = (txtFilteredMails) ? mails = txtFilteredMails : mails = gEmails;
 
+        let mailsToShow;
         switch (filterBy.status) {
             case 'inbox':
-                return Promise.resolve(gEmails);
+                mailsToShow = mails.filter(mail => {
+
+                    return mail.status === 'recieved'
+                })
+                return Promise.resolve(mailsToShow);
+
             case 'starred':
-                const mailsToShow = gEmails.filter(mail => {
+                mailsToShow = mails.filter(mail => {
                     return mail.isStarred;
+                });
+                return Promise.resolve(mailsToShow);
+
+            case 'sent':
+                mailsToShow = mails.filter(mail => {
+                    return mail.status === 'sent';
                 });
                 return Promise.resolve(mailsToShow);
         }
 
-        // let { txt } = filterBy
-        // txt.toUpperCase();
-        // console.log(txt)
-        // const mailsToShow = gEmails.filter(mail => {
-        //     mail.subject.toLowerCase();
-        //     console.log(mail.subject.toLowerCase())
-        //     return mail.subject.includes(txt)
-        // })
-        // return Promise.resolve(mailsToShow)
-    }
 
-    return Promise.resolve(gEmails)
+    }
+    // const inboxMails = gEmails.filter(mail => {
+    //     return mail.status === 'recieved'
+    // })
+
+    return Promise.resolve(null);
 }
 
 function getMailById(mailId) {

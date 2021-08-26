@@ -2,10 +2,13 @@ import { mailService } from "../sevices/mail.service.js";
 
 export class MailFilter extends React.Component {
     state = {
-        filterBy: {
-            txt: '',
-        },
+        filterBy: this.props.filterBy
     };
+    // state = {
+    //     filterBy: {
+    //         txt: '',
+    //     },
+    // };
 
     handleChange = ({ target }) => {
         const field = target.name;

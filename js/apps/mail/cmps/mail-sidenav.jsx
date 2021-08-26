@@ -1,4 +1,7 @@
+const { Link } = ReactRouterDOM
+
 export class MailSidenav extends React.Component {
+
     state = {
         filterBy: {
             status: 'inbox',
@@ -22,7 +25,7 @@ export class MailSidenav extends React.Component {
         const { status } = this.state.filterBy;
         return (
             <div className=" mail-side-nav">
-                <div className="compose-container"><div className="side-nav-compose"><div className="side-nav-icon"><i className="fas fa-plus-circle"></i></div> Compose</div></div>
+                <div className="compose-container"><Link to="/mail/newmail"><div className="side-nav-compose"><div className="side-nav-icon"><i className="fas fa-plus-circle"></i></div> Compose</div></Link></div>
                 <div value="inbox" onClick={() => { this.setFilter('inbox') }} className={`${(status === 'inbox') ? 'active' : ''} side-nav side-nav-inbox`}><div className="side-nav-icon"><i className="fas fa-inbox"></i></div> Inbox</div>
                 <div value="starred" onClick={() => { this.setFilter('starred') }} className={`${(status === 'starred') ? 'active' : ''} side-nav`}> <div className="side-nav-icon"><i className="fas fa-star"></i></div> Starred</div>
                 <div value="sent" onClick={() => { this.setFilter('sent') }} className={`${(status === 'sent') ? 'active' : ''} side-nav`}><div className="side-nav-icon"><i className="fas fa-paper-plane"></i></div> Sent</div>

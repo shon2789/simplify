@@ -7,7 +7,12 @@ export class MailApp extends React.Component {
 
     state = {
         mails: null,
-        filterBy: null,
+        filterBy: {
+            status: 'inbox',
+            isStarred: false,
+            isRead: false,
+            txt: ''
+        }
     }
 
     componentDidMount() {
@@ -28,8 +33,8 @@ export class MailApp extends React.Component {
     render() {
         return (
             <section className="mail-main-container">
-                <MailSidenav onSetFilter={this.onSetFilter} />
-                <MailList loadMails={this.loadMails} mails={this.state.mails} onSetFilter={this.onSetFilter} />
+                <MailSidenav filterBy={this.state.filterBy} onSetFilter={this.onSetFilter} />
+                <MailList filterBy={this.state.filterBy} loadMails={this.loadMails} mails={this.state.mails} onSetFilter={this.onSetFilter} />
             </section>
         )
     }

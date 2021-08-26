@@ -55,5 +55,6 @@ function getFormattedDate(timestamp) {
         "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
     ];
     const time = new Date(timestamp);
-    return (time.getDate() + ' ' + monthNames[time.getMonth()])
+    time.toLocaleDateString('il-IL')
+    return (time.getDate() + ' ' + monthNames[time.getMonth()] + ', ' + time.getHours() + ':' + time.getMinutes())
 }
