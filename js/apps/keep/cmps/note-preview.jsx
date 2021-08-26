@@ -1,3 +1,4 @@
+import { NoteActions } from "./note-actions.jsx"
 import { NoteImg } from "./note-img.jsx"
 import { NoteTodos } from "./note-todos.jsx"
 import { NoteTxt } from "./note-txt.jsx"
@@ -32,6 +33,12 @@ export class NotePreview extends React.Component {
             loadNotes={this.props.loadNotes}
           />
         )}
+        <NoteActions
+          onDeleteNote={this.props.onDeleteNote}
+          note={note}
+          onAddCopyNote={this.props.onAddCopyNote}
+          onTogglePin={this.props.onTogglePin}
+        />
       </div>
     )
   }

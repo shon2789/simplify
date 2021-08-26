@@ -1,4 +1,3 @@
-import { func } from "prop-types"
 import { storageService } from "../../../services/storage.service.js"
 import { utilService } from "../../../services/util.service.js"
 
@@ -8,13 +7,16 @@ export const noteService = {
   deleteNote,
   addNote,
   removeTodo,
+  addCopyNote,
+  checkPinnedNotes,
+  toggleNotePin,
 }
 
 let gNotes = [
   {
     id: "n101",
     type: "note-txt",
-    isPinned: false,
+    isPinned: true,
     info: {
       txt: "Fullstack Me Baby! ",
     },
@@ -181,12 +183,35 @@ function addNote(note) {
   return Promise.resolve()
 }
 
+function addCopyNote(note) {
+  const newNote = JSON.parse(JSON.stringify(note))
+  newNote.id = utilService.makeId()
+  gNotes.push(newNote)
+  _saveNotesToStorage()
+  return Promise.resolve()
+}
+
 function removeTodo(isTodoDone, todoIdx, noteId) {
   const noteIdx = gNotes.findIndex((note) => {
     return noteId === note.id
   })
 
   gNotes[noteIdx].info.todos[todoIdx].doneAt = !isTodoDone
+  _saveNotesToStorage()
+}
+
+function checkPinnedNotes() {
+  return gNotes.some((note) => {
+    return note.isPinned
+  })
+}
+
+function toggleNotePin(noteId) {
+  const noteIdx = gNotes.findIndex((note) => {
+    return note.id === noteId
+  })
+
+  gNotes[noteIdx].isPinned = !gNotes[noteIdx].isPinned
   _saveNotesToStorage()
 }
 

@@ -17,6 +17,21 @@ export class NoteList extends React.Component {
     })
   }
 
+  onDeleteNote = (noteId) => {
+    noteService.deleteNote(noteId)
+    this.loadNotes()
+  }
+
+  onAddCopyNote = (note) => {
+    noteService.addCopyNote(note)
+    this.loadNotes()
+  }
+
+  onTogglePin = (noteId) => {
+    noteService.toggleNotePin(noteId)
+    this.loadNotes()
+  }
+
   render() {
     const { notes } = this.state
     if (!notes) return <div>Loading...</div>
@@ -24,15 +39,46 @@ export class NoteList extends React.Component {
     return (
       <section className="note-list">
         <NoteFilter loadNotes={this.loadNotes} />
+        {noteService.checkPinnedNotes() && (
+          <React.Fragment>
+            <h2>Pinned Notes</h2>
+            <div className="notes-cards-container ">
+              {notes.map((note) => {
+                {
+                  if (note.isPinned) {
+                    return (
+                      <NotePreview
+                        key={note.id}
+                        note={note}
+                        loadNotes={this.loadNotes}
+                        onDeleteNote={this.onDeleteNote}
+                        onAddCopyNote={this.onAddCopyNote}
+                        onTogglePin={this.onTogglePin}
+                      />
+                    )
+                  }
+                }
+              })}
+            </div>
+          </React.Fragment>
+        )}
+        <h2>My Notes</h2>
         <div className="notes-cards-container ">
           {notes.map((note) => {
-            return (
-              <NotePreview
-                key={note.id}
-                note={note}
-                loadNotes={this.loadNotes}
-              />
-            )
+            {
+              if (!note.isPinned) {
+                return (
+                  <NotePreview
+                    key={note.id}
+                    note={note}
+                    loadNotes={this.loadNotes}
+                    onDeleteNote={this.onDeleteNote}
+                    onAddCopyNote={this.onAddCopyNote}
+                    onTogglePin={this.onTogglePin}
+                  />
+                )
+              }
+            }
           })}
         </div>
       </section>

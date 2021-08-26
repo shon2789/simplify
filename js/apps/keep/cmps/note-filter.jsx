@@ -10,7 +10,7 @@ export class NoteFilter extends React.Component {
   }
 
   changeNoteType = (type) => {
-    this.setState({ note: { ...this.state.note, ["type"]: type } })
+    this.setState({ note: { ...this.state.note, ["type"]: type, ["txt"]: "" } })
   }
 
   onValueChange = ({ target }) => {

@@ -1,4 +1,5 @@
 .note-preview {
+  position: relative;
   background-color: #f3f3f3;
   border: 0.5px solid rgb(224, 224, 224);
   width: 15rem;
@@ -14,6 +15,9 @@
 
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
     rgba(0, 0, 0, 0.08) 0px 0px 0px;
+
+  transition: box-shadow 0.3s;
+  transform: translateZ(0);
 }
 
 .note-preview h1 {
@@ -43,4 +47,37 @@
 
 .todo-container p.active {
   text-decoration: line-through;
+}
+
+.note-preview:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.note-preview:hover .note-action-btn i {
+  opacity: 0.6;
+}
+
+/* Actions Btns */
+
+.note-actions {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.note-action-btn {
+  cursor: pointer;
+}
+
+.note-action-btn i {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.note-preview:hover .note-action-btn i:hover {
+  opacity: 1;
 }
