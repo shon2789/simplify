@@ -18,13 +18,9 @@ export class NoteFilter extends React.Component {
     this.setState({ note: { ...this.state.note, ["txt"]: txt } })
   }
 
-  getPlaceHolderTxt = () => {
-    if (this.state.note.type === "note-txt") return "Enter a note..."
-    if (this.state.note.type === "note-img") return "Enter image URL..."
-    if (this.state.note.type === "note-video") return "Enter video URL..."
-    if (this.state.note.type === "note-todos") {
-      return "Enter comma separated list..."
-    }
+  onGetPlaceHolderTxt = () => {
+    const noteType = this.state.note.type
+    return noteService.getPlaceHolderTxt(noteType)
   }
 
   onAddNote = (note) => {
@@ -44,7 +40,7 @@ export class NoteFilter extends React.Component {
           <input
             className="note-input"
             type="text"
-            placeholder={this.getPlaceHolderTxt()}
+            placeholder={this.onGetPlaceHolderTxt()}
             value={txt}
             onChange={this.onValueChange}
           />

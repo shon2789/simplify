@@ -1,16 +1,45 @@
+import { noteService } from "../services/note.service.js"
+
 export class NoteEdit extends React.Component {
+  state = {
+    note: null,
+    txt: "",
+  }
+
+  componentDidMount() {
+    this.setState({ note: this.props.note })
+  }
+
+  onSaveEditChange = () => {
+    noteService.formatNoteByType(this.state.note.id, this.state.txt)
+    this.props.loadNotes()
+  }
+
+  onGetPlaceHolderTxt = () => {
+    const noteType = this.state.note.type
+    return noteService.getPlaceHolderTxt(noteType)
+  }
+
+  handleChange = ({ target }) => {
+    const txt = target.value
+    this.setState({ txt })
+  }
+
   render() {
+    const { note, txt } = this.state
+    if (!note) return <div>Loading..</div>
+    console.log(note.info)
+    console.log(note)
     return (
       <div className="note-edit">
-        <div className="edit-note-actions">
-          <i className="fas fa-check-square edit-note-btn"></i>
-          <i className="fas fa-video edit-note-btn"></i>
-          <i className="fas fa-images edit-note-btn"></i>
-          <i className="fas fa-font edit-note-btn"></i>
-        </div>
         <div className="note-edit-input-container">
-          <input type="text" placeholder="Edit Me..." />
-          <div className="submit-note-btn">
+          <input
+            value={txt}
+            type="text"
+            placeholder={this.onGetPlaceHolderTxt()}
+            onChange={this.handleChange}
+          />
+          <div onClick={this.onSaveEditChange} className="submit-note-btn">
             <i className="fas fa-save save-btn"></i>
           </div>
         </div>

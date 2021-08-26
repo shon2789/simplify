@@ -11,6 +11,8 @@ export const noteService = {
   checkPinnedNotes,
   toggleNotePin,
   changeNoteColor,
+  getPlaceHolderTxt,
+  formatNoteByType,
 }
 
 let gNotes = [
@@ -135,6 +137,8 @@ function deleteNote(noteId) {
 }
 
 function addNote(note) {
+  console.log(note)
+
   let newNote
   if (note.type === "note-txt") {
     newNote = {
@@ -168,14 +172,9 @@ function addNote(note) {
     }
   }
   if (note.type === "note-todos") {
-    const enteredTodos = note.txt.split(",")
-    const formattedTodos = []
-
-    enteredTodos.forEach((todo) => {
-      console.log(todo)
-      formattedTodos.push({ txt: todo, doneAt: null })
-    })
+    const formattedTodos = formatTodoStr(note.txt)
     console.log(formattedTodos)
+
     newNote = {
       id: utilService.makeId(),
       type: note.type,
@@ -189,6 +188,29 @@ function addNote(note) {
   gNotes.push(newNote)
   _saveNotesToStorage()
   return Promise.resolve()
+}
+
+function formatNoteByType(noteId, newTxt) {
+  const noteIdx = gNotes.findIndex((note) => {
+    return note.id === noteId
+  })
+
+  const noteType = gNotes[noteIdx].type
+
+  if (noteType === "note-txt") {
+    gNotes[noteIdx].info.txt = newTxt
+  }
+
+  if (noteType === "note-img" || noteType === "note-video") {
+    gNotes[noteIdx].info.url = newTxt
+  }
+
+  if (noteType === "note-todos") {
+    const formattedTodos = formatTodoStr(newTxt)
+    gNotes[noteIdx].info.todos = formattedTodos
+  }
+
+  _saveNotesToStorage()
 }
 
 function addCopyNote(note) {
@@ -230,6 +252,28 @@ function changeNoteColor(noteId, noteColor) {
 
   gNotes[noteIdx].color = `${noteColor}`
   _saveNotesToStorage()
+}
+
+function formatTodoStr(txt) {
+  console.log(txt)
+  const enteredTodos = txt.split(",")
+
+  const formattedTodos = []
+
+  enteredTodos.forEach((todo) => {
+    console.log(todo)
+    formattedTodos.push({ txt: todo, doneAt: null })
+  })
+  return formattedTodos
+}
+
+function getPlaceHolderTxt(noteType) {
+  if (noteType === "note-txt") return "Enter a note..."
+  if (noteType === "note-img") return "Enter image URL..."
+  if (noteType === "note-video") return "Enter video URL..."
+  if (noteType === "note-todos") {
+    return "Enter comma separated list..."
+  }
 }
 
 function _saveNotesToStorage() {

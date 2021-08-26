@@ -58,7 +58,9 @@ export class NotePreview extends React.Component {
           onEditMode={this.onEditMode}
         />
 
-        {isEditClass && <NoteEdit />}
+        {isEditClass && (
+          <NoteEdit note={note} loadNotes={this.props.loadNotes} />
+        )}
       </div>
     )
   }
