@@ -17,12 +17,37 @@ export const noteService = {
 
 let gNotes = [
   {
-    id: "n101",
-    type: "note-txt",
+    id: "n100",
+    type: "note-todos",
     isPinned: true,
     color: "F0EEEE",
     info: {
-      txt: "Fullstack Me Baby! ",
+      label: "Water is important!",
+      todos: [
+        { txt: "Drink water", doneAt: 187111111 },
+        { txt: "Drink water", doneAt: 187111113 },
+        { txt: "Drink water", doneAt: 187111112 },
+        { txt: "Drink water", doneAt: null },
+      ],
+    },
+  },
+  {
+    id: "n198",
+    type: "note-video",
+    isPinned: true,
+    color: "#89EB89",
+    info: {
+      url: "https://www.youtube.com/watch?v=EJtmfkKulNA",
+    },
+  },
+
+  {
+    id: "n101",
+    type: "note-txt",
+    isPinned: true,
+    color: "#DF5E5E",
+    info: {
+      txt: "Do you like jazz?",
     },
   },
   {
@@ -31,76 +56,78 @@ let gNotes = [
     isPinned: false,
     color: "F0EEEE",
     info: {
-      url: "https://images.unsplash.com/photo-1508919801845-fc2ae1bc2a28?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aW1nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80",
-      title: "Bobi and Me",
-    },
-    style: {
-      backgroundColor: "#00d",
+      url: "https://www.zenrooms.com/blog/wp-content/uploads/2020/05/funny-cats-2.jpg",
+      title: "Cute cats",
     },
   },
-  {
-    id: "n103",
-    type: "note-todos",
-    isPinned: false,
-    color: "F0EEEE",
-    info: {
-      label: "Get my stuff together",
-      todos: [
-        { txt: "Driving liscence", doneAt: null },
-        { txt: "Coding power", doneAt: 187111111 },
-      ],
-    },
-  },
+
   {
     id: "n104",
-    type: "note-todos",
-    isPinned: false,
+    type: "note-img",
+    isPinned: true,
     color: "F0EEEE",
     info: {
-      label: "Get my stuff together",
-      todos: [
-        { txt: "Driving liscence", doneAt: null },
-        { txt: "Coding power", doneAt: 187111111 },
-      ],
+      url: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+      title: "We love coffee!",
     },
   },
   {
     id: "n105",
     type: "note-todos",
-    isPinned: false,
-    color: "F0EEEE",
+    isPinned: true,
+    color: "#7BE1EE",
     info: {
-      label: "Get my stuff together",
+      label: "",
       todos: [
-        { txt: "Driving liscence", doneAt: null },
-        { txt: "Coding power", doneAt: 187111111 },
+        { txt: "Listen to music", doneAt: 187111118 },
+        { txt: "Play some music", doneAt: 187111115 },
+        { txt: "Code", doneAt: 187111117 },
+        { txt: "Take a ride", doneAt: null },
+        { txt: "Sport!!!", doneAt: null },
+        { txt: "Take a walk", doneAt: null },
       ],
     },
   },
   {
     id: "n106",
-    type: "note-todos",
+    type: "note-video",
     isPinned: false,
     color: "F0EEEE",
     info: {
-      label: "Get my stuff together",
-      todos: [
-        { txt: "Driving liscence", doneAt: null },
-        { txt: "Coding power", doneAt: 187111111 },
-      ],
+      url: "https://www.youtube.com/watch?v=neV3EPgvZ3g",
     },
   },
   {
     id: "n107",
     type: "note-todos",
     isPinned: false,
-    color: "F0EEEE",
+    color: "#FA81E6",
     info: {
-      label: "Get my stuff together",
+      label: "wooohoooo",
       todos: [
-        { txt: "Driving liscence", doneAt: null },
+        { txt: "Is Yossi the cutest cat in the world?", doneAt: 187111111 },
         { txt: "Coding power", doneAt: 187111111 },
       ],
+    },
+  },
+  {
+    id: "n108",
+    type: "note-img",
+    isPinned: false,
+    color: "#7BE1EE",
+    info: {
+      url: "https://media-exp1.licdn.com/dms/image/C5603AQG3Sbj0ovAutQ/profile-displayphoto-shrink_800_800/0/1628494662469?e=1635379200&v=beta&t=VYEAZ5y-8RouhU1zm_q8j7vfuL0ms5OE_2Olkm492T4",
+      title: "wooohoooo",
+    },
+  },
+  {
+    id: "109",
+    type: "note-img",
+    isPinned: false,
+    color: "F0EEEE",
+    info: {
+      url: "https://media-exp1.licdn.com/dms/image/C5603AQG0aGuApw0TsQ/profile-displayphoto-shrink_200_200/0/1625749045552?e=1635379200&v=beta&t=U-457jnG4wQNI3IJ_A05kNwydJrHjpLnT0I5LyCHqgg",
+      title: "wooohoooo",
     },
   },
 ]

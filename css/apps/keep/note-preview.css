@@ -24,7 +24,7 @@
 .edit-mode {
   z-index: 1;
   width: 20rem;
-  height: 23rem;
+  min-height: 20rem;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -38,6 +38,9 @@
 
 .note-img {
   /* max-width: 13rem; */
+  width: 94%;
+}
+.note-preview iframe {
   width: 94%;
 }
 
