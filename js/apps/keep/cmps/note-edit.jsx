@@ -29,8 +29,6 @@ export class NoteEdit extends React.Component {
   render() {
     const { note, txt } = this.state
     if (!note) return <div>Loading..</div>
-    console.log(note.info)
-    console.log(note)
     return (
       <div className="note-edit">
         <div className="note-edit-input-container">
