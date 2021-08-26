@@ -11,13 +11,16 @@ export class MailSidenav extends React.Component {
         }
     }
 
-
     setFilter = (value) => {
-        console.log(value);
         this.setState({ filterBy: { ...this.state.filterBy, status: value } }, () => {
-            this.props.onSetFilter(this.state.filterBy)
+            // this.props.onSetFilter(this.state.filterBy)
+            this.props.getCurrStatus(this.state.filterBy.status)
+
         });
     }
+
+
+
 
 
 

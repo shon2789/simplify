@@ -27,9 +27,34 @@
 }
 
 .nav-container>:not(:last-child) {
-    padding-right: 2rem;
+    margin-right: 2rem;
 }
 
 .nav-link.active path {
     fill: #F2C16B;
+}
+
+.mail-svg {
+    position: relative;
+}
+
+.notification {
+    min-width: 20px;
+    min-height: 20px;
+    position: absolute;
+    background-color: rgb(252, 7, 7);
+    color: #f0eeee;
+    font-family: Lato-Bold;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: -12px;
+    right: -2px;
+    opacity: 1;
+}
+
+.hide-notification.notification {
+    opacity: 0;
 }

@@ -1,6 +1,8 @@
 import { Cards } from '../cmps/home/cards.jsx';
 import { Hero } from '../cmps/home/hero.jsx';
 export class AppHome extends React.Component {
+
+
     render() {
         return (
             <section>
