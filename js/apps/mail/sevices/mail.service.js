@@ -24,12 +24,12 @@ let gEmails = [
     },
     {
         id: utilService.makeId(),
-        from: 'Raz',
+        from: 'You',
         subject: 'Hello!',
         body: utilService.makeLorem(),
         isRead: true,
         sentAt: 1551133930594,
-        to: 'shon@simplify.com',
+        to: 'Raz',
         isStarred: false,
         status: 'sent'
     },
