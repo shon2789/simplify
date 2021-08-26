@@ -1,4 +1,5 @@
 import { noteService } from "../services/note.service.js"
+import { NoteEdit } from "./note-edit.jsx"
 import { NoteFilter } from "./note-filter.jsx"
 import { NotePreview } from "./note-preview.jsx"
 

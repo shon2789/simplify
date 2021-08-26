@@ -10,6 +10,7 @@ export const noteService = {
   addCopyNote,
   checkPinnedNotes,
   toggleNotePin,
+  changeNoteColor,
 }
 
 let gNotes = [
@@ -17,6 +18,7 @@ let gNotes = [
     id: "n101",
     type: "note-txt",
     isPinned: true,
+    color: "F0EEEE",
     info: {
       txt: "Fullstack Me Baby! ",
     },
@@ -25,6 +27,7 @@ let gNotes = [
     id: "n102",
     type: "note-img",
     isPinned: false,
+    color: "F0EEEE",
     info: {
       url: "https://images.unsplash.com/photo-1508919801845-fc2ae1bc2a28?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aW1nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80",
       title: "Bobi and Me",
@@ -37,6 +40,7 @@ let gNotes = [
     id: "n103",
     type: "note-todos",
     isPinned: false,
+    color: "F0EEEE",
     info: {
       label: "Get my stuff together",
       todos: [
@@ -49,6 +53,7 @@ let gNotes = [
     id: "n104",
     type: "note-todos",
     isPinned: false,
+    color: "F0EEEE",
     info: {
       label: "Get my stuff together",
       todos: [
@@ -61,6 +66,7 @@ let gNotes = [
     id: "n105",
     type: "note-todos",
     isPinned: false,
+    color: "F0EEEE",
     info: {
       label: "Get my stuff together",
       todos: [
@@ -73,6 +79,7 @@ let gNotes = [
     id: "n106",
     type: "note-todos",
     isPinned: false,
+    color: "F0EEEE",
     info: {
       label: "Get my stuff together",
       todos: [
@@ -85,6 +92,7 @@ let gNotes = [
     id: "n107",
     type: "note-todos",
     isPinned: false,
+    color: "F0EEEE",
     info: {
       label: "Get my stuff together",
       todos: [
@@ -212,6 +220,15 @@ function toggleNotePin(noteId) {
   })
 
   gNotes[noteIdx].isPinned = !gNotes[noteIdx].isPinned
+  _saveNotesToStorage()
+}
+
+function changeNoteColor(noteId, noteColor) {
+  const noteIdx = gNotes.findIndex((note) => {
+    return note.id === noteId
+  })
+
+  gNotes[noteIdx].color = `${noteColor}`
   _saveNotesToStorage()
 }
 

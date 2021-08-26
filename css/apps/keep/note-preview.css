@@ -18,6 +18,18 @@
 
   transition: box-shadow 0.3s;
   transform: translateZ(0);
+  transition: transform 0.3s;
+}
+
+.edit-mode {
+  z-index: 1;
+  width: 20rem;
+  height: 23rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease-out;
 }
 
 .note-preview h1 {
@@ -25,7 +37,8 @@
 }
 
 .note-img {
-  max-width: 13rem;
+  /* max-width: 13rem; */
+  width: 94%;
 }
 
 .todo-container {
@@ -61,7 +74,7 @@
 
 .note-actions {
   position: absolute;
-  bottom: 10px;
+  bottom: 5px;
   left: 0;
   width: 100%;
   display: flex;
@@ -80,4 +93,95 @@
 
 .note-preview:hover .note-action-btn i:hover {
   opacity: 1;
+}
+
+.note-colors {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 6px;
+}
+
+.note-colors.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.note-colors.shown {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.color {
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid #292929;
+}
+
+.red {
+  background-color: rgb(223, 94, 94);
+}
+
+.green {
+  background-color: rgb(137, 235, 137);
+}
+
+.blue {
+  background-color: rgb(123, 225, 238);
+}
+
+.white {
+  background-color: #f0eeee;
+}
+
+.purple {
+  background-color: rgb(250, 129, 230);
+}
+
+/* Note Edit */
+
+.note-edit {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.note-edit input {
+  outline: none;
+  padding: 10px;
+  color: #292929;
+  border-radius: 10px;
+  border: none;
+  height: 2rem;
+  box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.25);
+  margin-top: 10px;
+}
+
+.note-edit .save-btn {
+  font-size: 2rem;
+}
+
+.note-edit i:hover {
+  color: #292929;
+  opacity: 1;
+}
+
+.note-edit-input-container {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.note-edit i {
+  cursor: pointer;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0.6;
+
+  transition: opacity 0.3s;
 }
