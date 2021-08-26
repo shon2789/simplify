@@ -5,6 +5,7 @@ import { NoteImg } from "./note-img.jsx"
 import { NoteTodos } from "./note-todos.jsx"
 import { NoteTxt } from "./note-txt.jsx"
 import { NoteVideo } from "./note-video.jsx"
+import { Screen } from "./screen.jsx"
 
 export class NotePreview extends React.Component {
   state = {
@@ -31,37 +32,41 @@ export class NotePreview extends React.Component {
     // if (!video) return <div>Loading...</div>
 
     return (
-      <div
-        style={{ backgroundColor: note.color }}
-        className={`${isEditClass ? "edit-mode" : ""} note-preview`}
-      >
-        {note.type === "note-txt" && <NoteTxt txt={note.info.txt} />}
-        {note.type === "note-video" && <NoteVideo video={note.info.url} />}
-        {note.type === "note-img" && (
-          <NoteImg title={note.info.title} img={note.info.url} />
-        )}
-        {note.type === "note-todos" && (
-          <NoteTodos
-            label={note.info.label}
-            todos={note.info.todos}
-            id={note.id}
-            loadNotes={this.props.loadNotes}
-          />
-        )}
-        <NoteActions
-          onDeleteNote={this.props.onDeleteNote}
-          note={note}
-          onAddCopyNote={this.props.onAddCopyNote}
-          onTogglePin={this.props.onTogglePin}
-          changeNoteColor={this.changeNoteColor}
-          loadNotes={this.props.loadNotes}
-          onEditMode={this.onEditMode}
-        />
+      <React.Fragment>
+        <Screen isOpen={isEditClass} exitEdit={this.onEditMode} />
 
-        {isEditClass && (
-          <NoteEdit note={note} loadNotes={this.props.loadNotes} />
-        )}
-      </div>
+        <div
+          style={{ backgroundColor: note.color }}
+          className={`${isEditClass ? "edit-mode" : ""} note-preview`}
+        >
+          {note.type === "note-txt" && <NoteTxt txt={note.info.txt} />}
+          {note.type === "note-video" && <NoteVideo video={note.info.url} />}
+          {note.type === "note-img" && (
+            <NoteImg title={note.info.title} img={note.info.url} />
+          )}
+          {note.type === "note-todos" && (
+            <NoteTodos
+              label={note.info.label}
+              todos={note.info.todos}
+              id={note.id}
+              loadNotes={this.props.loadNotes}
+            />
+          )}
+          <NoteActions
+            onDeleteNote={this.props.onDeleteNote}
+            note={note}
+            onAddCopyNote={this.props.onAddCopyNote}
+            onTogglePin={this.props.onTogglePin}
+            changeNoteColor={this.changeNoteColor}
+            loadNotes={this.props.loadNotes}
+            onEditMode={this.onEditMode}
+          />
+
+          {isEditClass && (
+            <NoteEdit note={note} loadNotes={this.props.loadNotes} />
+          )}
+        </div>
+      </React.Fragment>
     )
   }
 }

@@ -11,6 +11,7 @@ export class NoteEdit extends React.Component {
   }
 
   onSaveEditChange = () => {
+    if (!this.state.txt) return
     noteService.formatNoteByType(this.state.note.id, this.state.txt)
     this.props.loadNotes()
   }

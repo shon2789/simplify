@@ -47,7 +47,7 @@ let gNotes = [
     isPinned: true,
     color: "#DF5E5E",
     info: {
-      txt: "Do you like jazz?",
+      txt: "The road to success is always under construction.",
     },
   },
   {
@@ -113,7 +113,7 @@ let gNotes = [
   {
     id: "n108",
     type: "note-img",
-    isPinned: false,
+    isPinned: true,
     color: "#7BE1EE",
     info: {
       url: "https://media-exp1.licdn.com/dms/image/C5603AQG3Sbj0ovAutQ/profile-displayphoto-shrink_800_800/0/1628494662469?e=1635379200&v=beta&t=VYEAZ5y-8RouhU1zm_q8j7vfuL0ms5OE_2Olkm492T4",
@@ -123,11 +123,20 @@ let gNotes = [
   {
     id: "109",
     type: "note-img",
-    isPinned: false,
+    isPinned: true,
     color: "F0EEEE",
     info: {
       url: "https://media-exp1.licdn.com/dms/image/C5603AQG0aGuApw0TsQ/profile-displayphoto-shrink_200_200/0/1625749045552?e=1635379200&v=beta&t=U-457jnG4wQNI3IJ_A05kNwydJrHjpLnT0I5LyCHqgg",
       title: "wooohoooo",
+    },
+  },
+  {
+    id: "110",
+    type: "note-txt",
+    isPinned: false,
+    color: "#DF5E5E",
+    info: {
+      txt: "Do you like jazz?",
     },
   },
 ]
