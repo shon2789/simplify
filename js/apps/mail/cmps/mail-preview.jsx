@@ -43,10 +43,21 @@ export class MailPreview extends React.Component {
             <Link to={{ pathname: `/mail/${mail.id}`, state: this.props.loadMails }}>
                 <section onClick={this.markMailAsRead}>
                     <section onClick={this.isReading} className={`mail-preview ${(mail.isRead) ? 'read' : ''}`}>
-                        <h3 className="mail-from-preview"><i onClick={this.onToggleStar} className={`${isStarred ? 'active-star' : ''} mail-star fas fa-star`}></i><i onClick={this.onDeleteMail} className="delete-mail fas fa-trash"></i>{mail.from}</h3>
-                        <p className="mail-subject-preview">{mail.subject}</p>
-                        <MailLongTxt txt={mail.body} />
-                        <p className="mail-sent-time-preview">{utilService.getFormattedDate(mail.sentAt)}</p>
+
+                        <h3 className="mail-from-preview">{mail.from}</h3>
+                        {/* <h3 className="mail-from-preview"><i onClick={this.onToggleStar} className={`${isStarred ? 'active-star' : ''} mail-star fas fa-star`}></i><i onClick={this.onDeleteMail} className="delete-mail fas fa-trash"></i>{mail.from}</h3> */}
+                        <div className="mail-subject-container">
+                            <p className="mail-subject-preview">{mail.subject}</p>
+                        </div>
+
+                        <div className="mail-body-container">
+                            <MailLongTxt txt={mail.body} />
+                        </div>
+
+                        <div className="mail-time-container">
+                            <div className="delete-star-container"><i onClick={this.onToggleStar} className={`${isStarred ? 'active-star' : ''} mail-star fas fa-star`}></i><i onClick={this.onDeleteMail} className="delete-mail fas fa-trash"></i></div>
+                            <p className="mail-sent-time-preview">{utilService.getFormattedDate(mail.sentAt)}</p>
+                        </div>
                     </section>
                     {/* {isReading && <div className="mail-body">{mail.body}</div>} */}
                 </section>

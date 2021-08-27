@@ -1,17 +1,22 @@
 .mail-compose {
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* margin-top: 2rem; */
+    height: 100%;
 }
 
 .mail-compose-container {
     border: 1px solid #292929;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 100%;
 }
 
 .mail-compose-header-form {
-    width: 50rem;
+    /* width: 50rem; */
     display: flex;
     flex-direction: column;
 }
@@ -27,22 +32,19 @@
     font-size: 1.2rem;
 }
 
-.mail-compose-body {
-    width: 50rem;
-}
-
 .mail-compose-body textarea {
     width: 100%;
     min-height: 30rem;
-    padding: 0.5rem;
+    /* min-height: 100%; */
     border: none;
     resize: none;
     font-size: 1.2rem;
     outline: none;
+    padding: 0.5rem;
 }
 
 .mail-compose-top {
-    width: 50rem;
+    /* width: 50rem; */
     background-color: #292929;
     color: #f0eeee;
     padding: 0.5rem;
@@ -51,21 +53,27 @@
 }
 
 .mail-compose-top h1 {
-    /* font-size: 1.2rem; */
+    font-size: 1.2rem;
     font-family: Lato-Bold;
     margin: 0;
     padding: 0;
 }
 
-.go-back-compose {
+.go-back-container-compose {
+    display: flex;
+    margin-bottom: 2rem;
+    align-items: flex-end;
+}
+
+.go-back {
     align-self: flex-start;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     cursor: pointer;
     opacity: 0.7;
     transition: opacity 0.3s;
 }
 
-.go-back-compose:hover {
+.go-back:hover {
     opacity: 1;
 }
 

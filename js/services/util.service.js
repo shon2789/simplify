@@ -56,5 +56,5 @@ function getFormattedDate(timestamp) {
     ];
     const time = new Date(timestamp);
     time.toLocaleDateString('il-IL')
-    return (time.getDate() + ' ' + monthNames[time.getMonth()] + ', ' + time.getHours() + ':' + time.getMinutes())
+    return (((time.getDate() < 10) ? '0' + time.getDate() : time.getDate()) + ' ' + monthNames[time.getMonth()] + ', ' + time.getHours() + ':' + time.getMinutes())
 }

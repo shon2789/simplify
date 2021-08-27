@@ -1,11 +1,9 @@
 .mail-side-nav {
-    width: 19.375rem;
-    /* min-height: calc(100vh - 15rem); */
-    /* min-height: 100%; */
+    width: 15.375rem;
     background-color: #F2C16B;
-    display: flex;
     flex-direction: column;
     gap: 2rem;
+    display: none;
 }
 
 .mail-side-nav .side-nav-inbox {
@@ -19,13 +17,11 @@
 .mail-side-nav>*:not(:first-child) {
     font-family: Lato-Bold;
     font-size: 1.5rem;
-    /* color: #292929; */
     margin-left: 1.25rem;
     display: flex;
 }
 
 i {
-    /* font-size: 1.5rem; */
     color: #292929;
     margin-right: 1rem;
 }
@@ -54,18 +50,6 @@ i.active-white {
     color: #f0eeee;
 }
 
-/* .side-nav:hover.side-nav {
-    background-color: #292929;
-    margin-left: 0;
-    color: #f0eeee;
-    padding-left: 1.2rem;
-    border-radius: 0px 30px 30px 0px;
-}
-
-.side-nav:hover i {
-    color: #f0eeee;
-} */
-
 .side-nav-compose {
     display: flex;
     justify-content: center;
@@ -92,8 +76,83 @@ i.active-white {
     justify-content: center;
 }
 
-/* @media (min-width: 1700px) {
+@media (min-width: 920px) {
     .mail-side-nav {
-        min-height: calc(100vh - 15rem);
+        display: flex;
     }
-} */
+}
+
+@media (min-width: 1250px) {
+    .mail-side-nav {
+        width: 17rem;
+    }
+}
+
+@media (min-width: 1500px) {
+    .mail-side-nav {
+        width: 19.375rem;
+        background-color: #F2C16B;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .mail-side-nav .side-nav-inbox {
+        margin-top: 3.125rem;
+    }
+    .side-nav {
+        cursor: pointer;
+    }
+    .mail-side-nav>*:not(:first-child) {
+        font-family: Lato-Bold;
+        font-size: 1.5rem;
+        margin-left: 1.25rem;
+        display: flex;
+    }
+    i {
+        color: #292929;
+        margin-right: 1rem;
+    }
+    i.active-white {
+        color: #f0eeee;
+    }
+    .side-nav-icon {
+        width: 1.8rem;
+        height: 1.8rem;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+    }
+    .side-nav.active {
+        background-color: #292929;
+        margin-left: 0;
+        color: #f0eeee;
+        padding: 1.2rem;
+        border-radius: 0px 30px 30px 0px;
+    }
+    .side-nav.active i {
+        color: #f0eeee;
+    }
+    .side-nav-compose {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 14rem;
+        height: 4rem;
+        margin-top: 2rem;
+        border-radius: 1.5rem;
+        background-color: #292929;
+        color: #f0eeee;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    .side-nav-compose i {
+        color: #f0eeee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .compose-container {
+        display: flex;
+        justify-content: center;
+    }
+}

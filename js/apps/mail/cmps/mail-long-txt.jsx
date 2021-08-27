@@ -16,7 +16,7 @@ export class MailLongTxt extends React.Component {
         if (!txt) return <div>Loading....</div>
 
         return (
-            <p className="mail-body-preview">{txt}</p>
+            <p className="mail-body-preview">{txt.substring(0, 100)}</p>
         )
     }
 }

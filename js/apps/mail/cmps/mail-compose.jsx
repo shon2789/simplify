@@ -34,8 +34,12 @@ export class MailCompose extends React.Component {
     render() {
         const { mail } = this.state;
         return (
-            <section className="mail-compose">
-                <i onClick={this.onBack} className="go-back-compose fas fa-arrow-left"></i>
+            <section className="mail-compose main-layout">
+                {/* <i onClick={this.onBack} className="go-back-compose fas fa-arrow-left"></i> */}
+                <div className="go-back-container-compose">
+                    <i onClick={this.onBack} className="go-back fas fa-arrow-left"></i>
+                    <div className="go-back-text">Go Back</div>
+                </div>
                 <div className="mail-compose-container">
                     <div className="mail-compose-top"><h1>New Mail</h1>
                         <div onClick={this.onSendMail} className="new-mail-btn"><i className="new-mail-send-btn fas fa-paper-plane"></i></div>
