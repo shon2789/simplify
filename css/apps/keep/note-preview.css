@@ -219,3 +219,9 @@
     width: 19rem;
   }
 }
+
+@media screen and (min-width: 600px) {
+  .note-preview {
+    width: 15rem;
+  }
+}
