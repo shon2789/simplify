@@ -43,8 +43,8 @@
 }
 
 .notification {
-  min-width: 20px;
-  min-height: 20px;
+  min-width: 15px;
+  min-height: 15px;
   position: absolute;
   background-color: rgb(252, 7, 7);
   color: #f0eeee;
@@ -54,9 +54,10 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  top: -12px;
-  right: -2px;
+  top: -2px;
+  right: -10px;
   opacity: 1;
+  font-size: 0.6rem;
 }
 
 .hide-notification.notification {
