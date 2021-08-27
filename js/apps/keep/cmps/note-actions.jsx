@@ -12,7 +12,7 @@ export class NoteActions extends React.Component {
 
   onEditNote = () => {
     this.setState({ isEditClicked: !this.state.isEditClicked })
-    this.props.onEditMode(this.state.isEditClicked)
+    this.props.onEditMode(true)
   }
 
   render() {

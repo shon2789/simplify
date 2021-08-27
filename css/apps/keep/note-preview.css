@@ -214,4 +214,8 @@
     width: 20rem;
     min-height: 20rem;
   }
+
+  .note-preview {
+    width: 19rem;
+  }
 }
