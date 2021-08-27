@@ -1,17 +1,18 @@
 .footer {
-    background-color: #292929;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: #292929;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 7.5rem;
-    color: #F2C16B;
-    margin-left: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5.5rem;
+  color: #f2c16b;
+  margin-left: 1rem;
+  font-size: 0.8rem;
 }
 
 /* @media (min-width: 1700px) {
@@ -19,3 +20,10 @@
         height: 5.5rem;
     }
 } */
+
+@media (min-width: 550px) {
+  .footer p {
+    height: 7.5rem;
+    font-size: 1.2rem;
+  }
+}

@@ -1,86 +1,105 @@
 .header {
-    background-color: #292929;
-    display: flex;
-    justify-content: center;
+  background-color: #292929;
+  display: flex;
+  justify-content: center;
 }
 
 .header-container {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    height: 4.5rem;
-    font-size: 2.2rem;
-    font-family: Kalam-Light;
-    font-weight: 300;
-    letter-spacing: 0.2rem;
-    color: #F2C16B;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 4.5rem;
+  font-size: 2.2rem;
+  font-family: Kalam-Light;
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+  color: #f2c16b;
+  cursor: pointer;
 }
 
 .nav-container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .nav-link svg {
-    width: 28px;
+  width: 28px;
 }
 
-.nav-container>:not(:last-child) {
-    margin-right: 2rem;
+.nav-container > :not(:last-child) {
+  margin-right: 2rem;
 }
 
 .nav-link.active path {
-    fill: #F2C16B;
+  fill: #f2c16b;
 }
 
 .mail-svg {
-    position: relative;
+  position: relative;
 }
 
 .notification {
-    min-width: 20px;
-    min-height: 20px;
-    position: absolute;
-    background-color: rgb(252, 7, 7);
-    color: #f0eeee;
-    font-family: Lato-Bold;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    top: -12px;
-    right: -2px;
-    opacity: 1;
+  min-width: 20px;
+  min-height: 20px;
+  position: absolute;
+  background-color: rgb(252, 7, 7);
+  color: #f0eeee;
+  font-family: Lato-Bold;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  top: -12px;
+  right: -2px;
+  opacity: 1;
 }
 
 .hide-notification.notification {
-    opacity: 0;
+  opacity: 0;
 }
 
-@media (min-width: 700px) {}
+@media (min-width: 350px) {
+  .logo {
+    height: 3.5rem;
+    font-size: 1.6rem;
+  }
+
+  .header-container {
+    justify-content: space-around;
+  }
+
+  .nav-link svg {
+    width: 22px;
+  }
+}
+
+@media (min-width: 450px) {
+  .header-container {
+    justify-content: space-between;
+  }
+}
 
 @media (min-width: 780px) {
-    .logo {
-        height: 4.5rem;
-        font-size: 2.2rem;
-    }
-    .nav-link svg {
-        width: 28px;
-    }
-    .notification {
-        font-size: 0.8rem;
-        width: 15px;
-        height: 15px;
-        top: -7px;
-        right: -10px;
-    }
-    /* @media (min-width: 920px) {
+  .logo {
+    height: 4.5rem;
+    font-size: 2.2rem;
+  }
+  .nav-link svg {
+    width: 28px;
+  }
+  .notification {
+    font-size: 0.8rem;
+    width: 15px;
+    height: 15px;
+    top: -7px;
+    right: -10px;
+  }
+  /* @media (min-width: 920px) {
         .logo {
             height: 4.5rem;
             font-size: 2.2rem;
@@ -99,214 +118,214 @@
 }
 
 @media (min-width: 1050px) {
-    .logo {
-        height: 5rem;
-        font-size: 2.5rem;
-    }
-    .nav-link svg {
-        width: 28px;
-    }
-    .notification {
-        font-size: 0.8rem;
-        width: 15px;
-        height: 15px;
-        top: -7px;
-        right: -10px;
-    }
+  .logo {
+    height: 5rem;
+    font-size: 2.5rem;
+  }
+  .nav-link svg {
+    width: 28px;
+  }
+  .notification {
+    font-size: 0.8rem;
+    width: 15px;
+    height: 15px;
+    top: -7px;
+    right: -10px;
+  }
 }
 
 @media (min-width: 1250px) {
-    .logo {
-        height: 5rem;
-        font-size: 2.5rem;
-    }
-    .nav-link svg {
-        width: 32px;
-    }
-    .notification {
-        width: 18px;
-        height: 18px;
-        top: -12px;
-        right: -2px;
-    }
+  .logo {
+    height: 5rem;
+    font-size: 2.5rem;
+  }
+  .nav-link svg {
+    width: 32px;
+  }
+  .notification {
+    width: 18px;
+    height: 18px;
+    top: -12px;
+    right: -2px;
+  }
 }
 
 @media (min-width: 1460px) {
-    .logo {
-        height: 5rem;
-    }
+  .logo {
+    height: 5rem;
+  }
 }
 
 @media (min-width: 1550px) {
-    .header {
-        background-color: #292929;
-        display: flex;
-        justify-content: center;
-    }
-    .header-container {
-        display: flex;
-        justify-content: space-between;
-    }
-    .logo {
-        display: flex;
-        align-items: center;
-        height: 6rem;
-        font-size: 2.5rem;
-        font-family: Kalam-Light;
-        font-weight: 300;
-        letter-spacing: 0.2rem;
-        color: #F2C16B;
-        cursor: pointer;
-    }
-    .nav-container {
-        display: flex;
-        align-items: center;
-    }
-    .nav-container>:not(:last-child) {
-        margin-right: 2rem;
-    }
-    .nav-link svg {
-        width: 35px;
-    }
-    .nav-link.active path {
-        fill: #F2C16B;
-    }
-    .mail-svg {
-        position: relative;
-    }
-    .notification {
-        min-width: 18px;
-        min-height: 18px;
-        position: absolute;
-        background-color: rgb(252, 7, 7);
-        color: #f0eeee;
-        font-family: Lato-Bold;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        top: -12px;
-        right: -2px;
-        opacity: 1;
-    }
-    .hide-notification.notification {
-        opacity: 0;
-    }
+  .header {
+    background-color: #292929;
+    display: flex;
+    justify-content: center;
+  }
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    height: 6rem;
+    font-size: 2.5rem;
+    font-family: Kalam-Light;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+    color: #f2c16b;
+    cursor: pointer;
+  }
+  .nav-container {
+    display: flex;
+    align-items: center;
+  }
+  .nav-container > :not(:last-child) {
+    margin-right: 2rem;
+  }
+  .nav-link svg {
+    width: 35px;
+  }
+  .nav-link.active path {
+    fill: #f2c16b;
+  }
+  .mail-svg {
+    position: relative;
+  }
+  .notification {
+    min-width: 18px;
+    min-height: 18px;
+    position: absolute;
+    background-color: rgb(252, 7, 7);
+    color: #f0eeee;
+    font-family: Lato-Bold;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: -12px;
+    right: -2px;
+    opacity: 1;
+  }
+  .hide-notification.notification {
+    opacity: 0;
+  }
 }
 
 @media (min-width: 1700px) {
-    .header {
-        background-color: #292929;
-        display: flex;
-        justify-content: center;
-    }
-    .header-container {
-        display: flex;
-        justify-content: space-between;
-    }
-    .logo {
-        display: flex;
-        align-items: center;
-        height: 6rem;
-        font-size: 2.5rem;
-        font-family: Kalam-Light;
-        font-weight: 300;
-        letter-spacing: 0.2rem;
-        color: #F2C16B;
-        cursor: pointer;
-    }
-    .nav-container {
-        display: flex;
-        align-items: center;
-    }
-    .nav-container>:not(:last-child) {
-        margin-right: 2rem;
-    }
-    .nav-link svg {
-        width: 35px;
-    }
-    .nav-link.active path {
-        fill: #F2C16B;
-    }
-    .mail-svg {
-        position: relative;
-    }
-    .notification {
-        min-width: 18px;
-        min-height: 18px;
-        position: absolute;
-        background-color: rgb(252, 7, 7);
-        color: #f0eeee;
-        font-family: Lato-Bold;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        top: -12px;
-        right: -2px;
-        opacity: 1;
-    }
-    .hide-notification.notification {
-        opacity: 0;
-    }
+  .header {
+    background-color: #292929;
+    display: flex;
+    justify-content: center;
+  }
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    height: 6rem;
+    font-size: 2.5rem;
+    font-family: Kalam-Light;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+    color: #f2c16b;
+    cursor: pointer;
+  }
+  .nav-container {
+    display: flex;
+    align-items: center;
+  }
+  .nav-container > :not(:last-child) {
+    margin-right: 2rem;
+  }
+  .nav-link svg {
+    width: 35px;
+  }
+  .nav-link.active path {
+    fill: #f2c16b;
+  }
+  .mail-svg {
+    position: relative;
+  }
+  .notification {
+    min-width: 18px;
+    min-height: 18px;
+    position: absolute;
+    background-color: rgb(252, 7, 7);
+    color: #f0eeee;
+    font-family: Lato-Bold;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: -12px;
+    right: -2px;
+    opacity: 1;
+  }
+  .hide-notification.notification {
+    opacity: 0;
+  }
 }
 
 @media (min-width: 1920px) {
-    .header {
-        background-color: #292929;
-        display: flex;
-        justify-content: center;
-    }
-    .header-container {
-        display: flex;
-        justify-content: space-between;
-    }
-    .logo {
-        display: flex;
-        align-items: center;
-        height: 7.5rem;
-        font-size: 3rem;
-        font-family: Kalam-Light;
-        font-weight: 300;
-        letter-spacing: 0.2rem;
-        color: #F2C16B;
-        cursor: pointer;
-    }
-    .nav-container {
-        display: flex;
-        align-items: center;
-    }
-    .nav-container>:not(:last-child) {
-        margin-right: 2rem;
-    }
-    .nav-link.active path {
-        fill: #F2C16B;
-    }
-    .nav-link svg {
-        width: 50px;
-    }
-    .mail-svg {
-        position: relative;
-    }
-    .notification {
-        min-width: 20px;
-        min-height: 20px;
-        position: absolute;
-        background-color: rgb(252, 7, 7);
-        color: #f0eeee;
-        font-family: Lato-Bold;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        top: -12px;
-        right: -2px;
-        opacity: 1;
-    }
-    .hide-notification.notification {
-        opacity: 0;
-    }
+  .header {
+    background-color: #292929;
+    display: flex;
+    justify-content: center;
+  }
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    height: 7.5rem;
+    font-size: 3rem;
+    font-family: Kalam-Light;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+    color: #f2c16b;
+    cursor: pointer;
+  }
+  .nav-container {
+    display: flex;
+    align-items: center;
+  }
+  .nav-container > :not(:last-child) {
+    margin-right: 2rem;
+  }
+  .nav-link.active path {
+    fill: #f2c16b;
+  }
+  .nav-link svg {
+    width: 50px;
+  }
+  .mail-svg {
+    position: relative;
+  }
+  .notification {
+    min-width: 20px;
+    min-height: 20px;
+    position: absolute;
+    background-color: rgb(252, 7, 7);
+    color: #f0eeee;
+    font-family: Lato-Bold;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: -12px;
+    right: -2px;
+    opacity: 1;
+  }
+  .hide-notification.notification {
+    opacity: 0;
+  }
 }
