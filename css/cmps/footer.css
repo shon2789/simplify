@@ -15,12 +15,6 @@
   font-size: 0.8rem;
 }
 
-/* @media (min-width: 1700px) {
-    .footer p {
-        height: 5.5rem;
-    }
-} */
-
 @media (min-width: 550px) {
   .footer p {
     height: 7.5rem;

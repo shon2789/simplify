@@ -1,30 +1,30 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html {
-    scroll-behavior: smooth;
-    font-family: Lato-Regular, Sans-serif;
+  scroll-behavior: smooth;
+  font-family: Lato-Regular, Sans-serif;
 }
 
 body {
-    background-color: #f0eeee;
+  background-color: #f0eeee;
 }
 
 #root {
-    min-height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
