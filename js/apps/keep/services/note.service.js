@@ -317,7 +317,7 @@ function formatTodoStr(txt) {
 }
 
 function getPlaceHolderTxt(noteType) {
-  if (noteType === "note-txt") return "Enter a note..."
+  if (noteType === "note-txt") return "Add a note..."
   if (noteType === "note-img") return "Enter image URL..."
   if (noteType === "note-video") return "Enter video URL..."
   if (noteType === "note-todos") {
