@@ -1,3 +1,4 @@
+import { mailService } from "../../apps/mail/sevices/mail.service.js"
 import { eventBusService } from "../../services/event-bus-service.js"
 import { BookSvg } from "./book-svg.jsx"
 import { KeepSvg } from "./keep-svg.jsx"
@@ -15,6 +16,7 @@ class _Header extends React.Component {
     removeEventBus;
 
     componentDidMount() {
+        if (!this.state.unReadMails) mailService.getAllUnreadMails().then((unReadMails) => { this.setState({ unReadMails }) })
         this.removeEventBus = eventBusService.on('mails-count', (unReadMails) => {
             console.log(unReadMails)
             this.setState({ unReadMails })
