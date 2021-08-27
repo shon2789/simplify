@@ -63,11 +63,11 @@
 }
 
 .mail-star:hover {
-    color: rgb(235, 229, 57);
+    color: #F2C16B;
 }
 
 .mail-star.active-star {
-    color: rgb(235, 229, 57);
+    color: #F2C16B;
 }
 
 .delete-mail {

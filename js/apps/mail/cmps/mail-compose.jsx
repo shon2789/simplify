@@ -36,8 +36,8 @@ export class MailCompose extends React.Component {
         return (
             <section className="mail-compose main-layout">
                 {/* <i onClick={this.onBack} className="go-back-compose fas fa-arrow-left"></i> */}
-                <div className="go-back-container-compose">
-                    <i onClick={this.onBack} className="go-back fas fa-arrow-left"></i>
+                <div onClick={this.onBack} className="go-back-container-compose">
+                    <i className="go-back fas fa-arrow-left"></i>
                     <div className="go-back-text">Go Back</div>
                 </div>
                 <div className="mail-compose-container">

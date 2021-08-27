@@ -66,6 +66,7 @@
 .go-back-text {
     font-family: Lato-Bold;
     font-size: 1.2rem;
+    cursor: pointer;
 }
 
 .go-back {

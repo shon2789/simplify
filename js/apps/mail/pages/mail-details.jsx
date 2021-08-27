@@ -47,8 +47,8 @@ export class MailDetails extends React.Component {
         return (
 
             <section className="mail-details main-layout">
-                <div className="go-back-container">
-                    <i onClick={this.onBack} className="go-back fas fa-arrow-left"></i>
+                <div onClick={this.onBack} className="go-back-container">
+                    <i className="go-back fas fa-arrow-left"></i>
                     <div className="go-back-text">Go Back</div>
                 </div>
                 <div className="mail-content">
