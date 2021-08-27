@@ -113,6 +113,7 @@
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    margin-bottom: 1rem;
 }
 
 .mail-time-container {
@@ -193,6 +194,9 @@
     }
     i.mail-hamburger {
         display: none;
+    }
+    .mail-body-container {
+        margin-bottom: 0;
     }
 }
 
