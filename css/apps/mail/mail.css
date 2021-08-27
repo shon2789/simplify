@@ -9,3 +9,9 @@
     min-height: 100%;
     margin-bottom: 2rem;
 }
+
+@media (min-width: 920px) {
+    .mail-main-container {
+        margin-bottom: 0;
+    }
+}
