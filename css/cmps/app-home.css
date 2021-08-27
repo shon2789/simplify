@@ -1,44 +1,45 @@
 @import "home-hero.css";
 @import "home-cards.css";
 .main-section {
-  background-color: #292929;
-  position: relative;
-  height: 85vh;
+    background-color: #292929;
+    position: relative;
+    height: 85vh;
+    top: -1px;
 }
 
 .home-app-container {
-  width: 100%;
+    width: 100%;
 }
 
 .wave {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
 }
 
 .wave svg {
-  fill: #f0eeee;
-  position: relative;
-  display: block;
-  width: calc(116% + 1.3px);
-  height: 30px;
+    fill: #f0eeee;
+    position: relative;
+    display: block;
+    width: calc(116% + 1.3px);
+    height: 30px;
 }
 
 .wave.shape-fill {
-  fill: #f0eeee;
+    fill: #f0eeee;
 }
 
 @media (min-width: 920px) {
-  .wave svg {
-    height: 100px;
-  }
+    .wave svg {
+        height: 100px;
+    }
 }
 
 @media (min-width: 1250px) {
-  .wave svg {
-    height: 164px;
-  }
+    .wave svg {
+        height: 164px;
+    }
 }
