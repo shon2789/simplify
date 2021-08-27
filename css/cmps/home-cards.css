@@ -65,3 +65,122 @@
         opacity: 1;
     }
 }
+
+@media (min-width: 1250px) {
+    .cards-header-title {
+        font-size: 3rem;
+    }
+    .card {
+        width: 18rem;
+        height: 19.875rem;
+    }
+    .cards-container {
+        justify-content: space-around;
+    }
+    .card svg {
+        margin-top: 1.875rem;
+        width: 4rem;
+        height: 4rem;
+    }
+    .learn-more-btn {
+        width: 8rem;
+        height: 2.5rem;
+        font-size: 1rem;
+    }
+    .card {
+        font-size: 1.1rem;
+    }
+}
+
+/* @media (min-width: 1460px) {
+    .cards-header-title {
+        font-size: 3rem;
+    }
+    .card {
+        width: 18rem;
+        height: 19.875rem;
+    }
+    .cards-container {
+        justify-content: space-around;
+    }
+    .card svg {
+        margin-top: 1.875rem;
+        width: 4rem;
+        height: 4rem;
+    }
+    .learn-more-btn {
+        width: 8rem;
+        height: 2.5rem;
+        font-size: 1rem;
+    }
+    .card {
+        font-size: 1.1rem;
+    }
+} */
+
+@media (min-width: 1550px) {
+    .cards-header-title {
+        font-size: 3.5rem;
+    }
+    .card {
+        width: 20rem;
+        height: 21.875rem;
+    }
+    .cards-container {
+        justify-content: space-around;
+    }
+}
+
+@media (min-width: 1700px) {
+    .cards-main-container {
+        height: 80vh;
+    }
+    .cards-header-title {
+        font-size: 4rem;
+        text-align: center;
+        color: #292929;
+    }
+    .cards-content-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .card {
+        width: 23rem;
+        height: 23.875rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #292929;
+        border-radius: 20px;
+        animation: revealSlow 0.8s ease-in-out;
+    }
+    .cards-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 4.375rem;
+        width: 100%;
+    }
+    .card svg {
+        margin-top: 1.875rem;
+        width: 5.8125rem;
+        height: 5.8125rem;
+    }
+    .card p {
+        color: #f0eeee;
+        font-size: 1.3rem;
+    }
+    .learn-more-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 10rem;
+        height: 3rem;
+        border-radius: 10px;
+        background-color: #F2C16B;
+        margin-bottom: 1.875rem;
+        font-size: 1.2rem;
+        color: #292929;
+    }
+}

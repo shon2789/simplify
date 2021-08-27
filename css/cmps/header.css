@@ -58,3 +58,193 @@
 .hide-notification.notification {
     opacity: 0;
 }
+
+@media (min-width: 1250px) {
+    .logo {
+        height: 5rem;
+        font-size: 2.5rem;
+    }
+    .nav-link svg {
+        width: 32px;
+    }
+}
+
+@media (min-width: 1460px) {
+    .logo {
+        height: 5rem;
+    }
+}
+
+@media (min-width: 1550px) {
+    .header {
+        background-color: #292929;
+        display: flex;
+        justify-content: center;
+    }
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo {
+        display: flex;
+        align-items: center;
+        height: 6rem;
+        font-size: 2.5rem;
+        font-family: Kalam-Light;
+        font-weight: 300;
+        letter-spacing: 0.2rem;
+        color: #F2C16B;
+        cursor: pointer;
+    }
+    .nav-container {
+        display: flex;
+        align-items: center;
+    }
+    .nav-container>:not(:last-child) {
+        margin-right: 2rem;
+    }
+    .nav-link svg {
+        width: 35px;
+    }
+    .nav-link.active path {
+        fill: #F2C16B;
+    }
+    .mail-svg {
+        position: relative;
+    }
+    .notification {
+        min-width: 18px;
+        min-height: 18px;
+        position: absolute;
+        background-color: rgb(252, 7, 7);
+        color: #f0eeee;
+        font-family: Lato-Bold;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        top: -12px;
+        right: -2px;
+        opacity: 1;
+    }
+    .hide-notification.notification {
+        opacity: 0;
+    }
+}
+
+@media (min-width: 1700px) {
+    .header {
+        background-color: #292929;
+        display: flex;
+        justify-content: center;
+    }
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo {
+        display: flex;
+        align-items: center;
+        height: 6rem;
+        font-size: 2.5rem;
+        font-family: Kalam-Light;
+        font-weight: 300;
+        letter-spacing: 0.2rem;
+        color: #F2C16B;
+        cursor: pointer;
+    }
+    .nav-container {
+        display: flex;
+        align-items: center;
+    }
+    .nav-container>:not(:last-child) {
+        margin-right: 2rem;
+    }
+    .nav-link svg {
+        width: 35px;
+    }
+    .nav-link.active path {
+        fill: #F2C16B;
+    }
+    .mail-svg {
+        position: relative;
+    }
+    .notification {
+        min-width: 18px;
+        min-height: 18px;
+        position: absolute;
+        background-color: rgb(252, 7, 7);
+        color: #f0eeee;
+        font-family: Lato-Bold;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        top: -12px;
+        right: -2px;
+        opacity: 1;
+    }
+    .hide-notification.notification {
+        opacity: 0;
+    }
+}
+
+@media (min-width: 1920px) {
+    .header {
+        background-color: #292929;
+        display: flex;
+        justify-content: center;
+    }
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo {
+        display: flex;
+        align-items: center;
+        height: 7.5rem;
+        font-size: 3rem;
+        font-family: Kalam-Light;
+        font-weight: 300;
+        letter-spacing: 0.2rem;
+        color: #F2C16B;
+        cursor: pointer;
+    }
+    .nav-container {
+        display: flex;
+        align-items: center;
+    }
+    .nav-container>:not(:last-child) {
+        margin-right: 2rem;
+    }
+    .nav-link.active path {
+        fill: #F2C16B;
+    }
+    .nav-link svg {
+        width: 50px;
+    }
+    .mail-svg {
+        position: relative;
+    }
+    .notification {
+        min-width: 20px;
+        min-height: 20px;
+        position: absolute;
+        background-color: rgb(252, 7, 7);
+        color: #f0eeee;
+        font-family: Lato-Bold;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        top: -12px;
+        right: -2px;
+        opacity: 1;
+    }
+    .hide-notification.notification {
+        opacity: 0;
+    }
+}
