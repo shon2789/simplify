@@ -11,6 +11,7 @@ export class NotePreview extends React.Component {
   state = {
     note: null,
     isEditClass: false,
+    isPallateClicked: false,
   }
 
   componentDidMount() {
@@ -20,14 +21,19 @@ export class NotePreview extends React.Component {
   changeNoteColor = (noteId, color) => {
     noteService.changeNoteColor(noteId, color)
     this.props.loadNotes()
+    this.onTogglePallate()
   }
 
   onEditMode = (isClicked) => {
     this.setState({ isEditClass: isClicked })
   }
 
+  onTogglePallate = () => {
+    this.setState({ isPallateClicked: !this.state.isPallateClicked })
+  }
+
   render() {
-    const { note, isEditClass } = this.state
+    const { note, isEditClass, isPallateClicked } = this.state
     if (!note) return <div>Loading...</div>
     // if (!video) return <div>Loading...</div>
 
@@ -60,6 +66,8 @@ export class NotePreview extends React.Component {
             changeNoteColor={this.changeNoteColor}
             loadNotes={this.props.loadNotes}
             onEditMode={this.onEditMode}
+            onTogglePallate={this.onTogglePallate}
+            isPallateClicked={isPallateClicked}
           />
 
           {isEditClass && (

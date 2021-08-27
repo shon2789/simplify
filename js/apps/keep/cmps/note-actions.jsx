@@ -2,12 +2,7 @@ import { NoteColors } from "./note-colors.jsx"
 
 export class NoteActions extends React.Component {
   state = {
-    isPallateClicked: false,
     isEditClicked: false,
-  }
-
-  onTogglePallate = () => {
-    this.setState({ isPallateClicked: !this.state.isPallateClicked })
   }
 
   onEditNote = () => {
@@ -19,13 +14,14 @@ export class NoteActions extends React.Component {
     const { onDeleteNote, note, onAddCopyNote, onTogglePin, changeNoteColor } =
       this.props
 
-    const { isPallateClicked, isEditClicked } = this.state
+    const { isPallateClicked, onTogglePallate } = this.props
     return (
       <div className="">
         <NoteColors
           changeNoteColor={changeNoteColor}
           noteId={note.id}
           isPallateClicked={isPallateClicked}
+          onTogglePallate={this.props.onTogglePallate}
         />
 
         <div className="note-actions">
@@ -44,7 +40,9 @@ export class NoteActions extends React.Component {
             <i className="fas fa-copy"></i>
           </div>
           <div
-            onClick={this.onTogglePallate}
+            onClick={() => {
+              onTogglePallate()
+            }}
             className="colors-btn note-action-btn"
           >
             <i className="fas fa-palette"></i>

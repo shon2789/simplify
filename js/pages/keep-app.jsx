@@ -1,4 +1,4 @@
-import { NoteList } from '../apps/keep/cmps/note-list.jsx';
+import { NoteList } from "../apps/keep/cmps/note-list.jsx"
 
 export class KeepApp extends React.Component {
   render() {
@@ -6,6 +6,6 @@ export class KeepApp extends React.Component {
       <section className="keep-app main-layout">
         <NoteList />
       </section>
-    );
+    )
   }
 }

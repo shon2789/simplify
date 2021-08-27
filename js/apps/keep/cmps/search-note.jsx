@@ -1,13 +1,4 @@
 export class SearchNote extends React.Component {
-  //   state = {
-  //     sortBy: "",
-  //   }
-
-  //   onFilterBy = (noteType) => {
-  //     this.props.loadNotes(noteType)
-  //     this.setState({ sortBy: noteType })
-  //   }
-
   render() {
     const { sortBy } = this.props
 
