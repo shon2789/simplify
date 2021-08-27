@@ -47,7 +47,10 @@ export class MailDetails extends React.Component {
         return (
 
             <section className="mail-details main-layout">
-                <i onClick={this.onBack} className="go-back fas fa-arrow-left"></i>
+                <div className="go-back-container">
+                    <i onClick={this.onBack} className="go-back fas fa-arrow-left"></i>
+                    <div className="go-back-text">Go Back</div>
+                </div>
                 <div className="mail-content">
                     <div className="mail-content-head">
                         <div className="mail-head-from">
@@ -55,7 +58,7 @@ export class MailDetails extends React.Component {
                             <h3 className="mail-to">Sent to: {mail.to}</h3>
                             <h4>Subject: {mail.subject}</h4>
                         </div>
-                        <div className="mail-delete-container">
+                        <div className="mail-time-details-container">
                             <p> {utilService.getFormattedDate(mail.sentAt)}</p>
                         </div>
                     </div>

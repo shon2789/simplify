@@ -38,10 +38,12 @@ export class MailFilter extends React.Component {
         const { txt } = this.state;
         // if (!filterBy) return <div>Loading...</div>
         return (
-            <form action="">
-                <input name="txt" value={txt} placeholder="Search Mail..." className="search-input" type="text" onChange={this.handleChange} />
-                <button className="mail-search-btn">Search</button>
-            </form>
+            <div className="search-mail-form">
+                <form >
+                    <input name="txt" value={txt} placeholder="Search Mail..." className="search-input" type="text" onChange={this.handleChange} />
+                    <button className="mail-search-btn">Search</button>
+                </form>
+            </div>
         )
     }
 }

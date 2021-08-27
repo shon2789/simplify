@@ -1,7 +1,15 @@
 .mails-container {
+    width: 10rem;
     margin-top: 2rem;
-    margin: 0 5rem;
+    margin: 0 2rem;
+    margin-right: 2rem;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+}
+
+@media (min-width: 1250px) {
+    .mails-container {
+        margin: 0 5rem;
+    }
 }

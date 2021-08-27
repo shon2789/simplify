@@ -37,11 +37,17 @@ export class MailList extends React.Component {
         const { mails, onSortMailBy, filterBy } = this.props;
         if (!mails) return <div>Loading...</div>
         return (
-            <section className="mails-container ">
+            <section className="mails-container main-layout">
                 <div className="form-container">
-                    <MailFilter filterBy={filterBy} onSetFilter={this.props.onSetFilter} />
+                    <div className="mail-search-container">
+                        <i className="mail-hamburger fas fa-bars"></i>
+                        <MailFilter filterBy={filterBy} onSetFilter={this.props.onSetFilter} />
+                    </div>
                 </div>
-                <div className="top-bar-list">
+                <div className="top-bar-list folder">
+                    <h3>{this.props.filterBy.status.charAt(0).toUpperCase() + this.props.filterBy.status.slice(1)}</h3>
+                </div>
+                <div className="top-bar-list full">
                     <h3 className="mail-from-list">From</h3>
                     <h3 className="mail-subject-list">Subject</h3>
                     <h3 className="mail-message-list">Message</h3>
