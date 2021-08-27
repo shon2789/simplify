@@ -24,6 +24,7 @@
   background-color: #292929;
   border-radius: 20px;
   animation: revealSlow 0.8s ease-in-out;
+  padding: 0 20px;
 }
 
 .cards-container {
@@ -45,6 +46,7 @@
 .card p {
   color: #f0eeee;
   font-size: 1.1rem;
+  text-align: center;
 }
 
 .learn-more-btn {
@@ -58,6 +60,12 @@
   margin-bottom: 1.875rem;
   font-size: 0.8rem;
   color: #292929;
+
+  transition: background-color 0.3s;
+}
+
+.learn-more-btn:hover {
+  background-color: #fdd693;
 }
 
 @keyframes revealSlow {
