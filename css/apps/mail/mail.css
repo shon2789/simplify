@@ -5,4 +5,6 @@
 @import 'mail-compose.css';
 .mail-main-container {
     display: flex;
+    flex-grow: 1;
+    min-height: 100%;
 }

@@ -6,6 +6,10 @@
     height: 85vh;
 }
 
+.home-app-container {
+    width: 100%;
+}
+
 .wave {
     position: absolute;
     bottom: 0;
@@ -20,9 +24,21 @@
     position: relative;
     display: block;
     width: calc(116% + 1.3px);
-    height: 164px;
+    height: 30px;
 }
 
 .wave.shape-fill {
     fill: #f0eeee;
+}
+
+@media (min-width: 920px) {
+    .wave svg {
+        height: 100px;
+    }
+}
+
+@media (min-width: 1250px) {
+    .wave svg {
+        height: 164px;
+    }
 }

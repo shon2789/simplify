@@ -1,6 +1,7 @@
 .mail-side-nav {
     width: 19.375rem;
-    min-height: calc(100vh - 15rem);
+    /* min-height: calc(100vh - 15rem); */
+    /* min-height: 100%; */
     background-color: #F2C16B;
     display: flex;
     flex-direction: column;
@@ -90,3 +91,9 @@ i.active-white {
     display: flex;
     justify-content: center;
 }
+
+/* @media (min-width: 1700px) {
+    .mail-side-nav {
+        min-height: calc(100vh - 15rem);
+    }
+} */

@@ -1,5 +1,5 @@
 .cards-main-container {
-    height: 80vh;
+    margin-bottom: 2rem;
 }
 
 .cards-header-title {
@@ -29,14 +29,17 @@
 .cards-container {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
     margin-top: 4.375rem;
     width: 100%;
 }
 
 .card svg {
     margin-top: 1.875rem;
-    width: 7.8125rem;
-    height: 7.8125rem;
+    width: 5.8125rem;
+    height: 5.8125rem;
 }
 
 .card p {
@@ -48,12 +51,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 11rem;
+    width: 9rem;
     height: 3.25rem;
     border-radius: 10px;
     background-color: #F2C16B;
     margin-bottom: 1.875rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #292929;
 }
 
@@ -66,7 +69,48 @@
     }
 }
 
-@media (min-width: 1250px) {
+@media (min-width: 780px) {
+    .cards-header-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 920px) {
+    .cards-header-title {
+        font-size: 3rem;
+    }
+    .card {
+        width: 15rem;
+        height: 16.875rem;
+    }
+    .cards-container {
+        justify-content: space-around;
+        flex-direction: row;
+        gap: 0;
+        /* align-items: flex-start; */
+        margin-top: 4.375rem;
+        width: 100%;
+    }
+    .card svg {
+        margin-top: 1.875rem;
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+    .learn-more-btn {
+        width: 8rem;
+        height: 2.5rem;
+        font-size: 1rem;
+    }
+    .card {
+        font-size: 1.1rem;
+    }
+    .cards-main-container {
+        height: 80vh;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 1050px) {
     .cards-header-title {
         font-size: 3rem;
     }
@@ -91,6 +135,32 @@
         font-size: 1.1rem;
     }
 }
+
+/* @media (min-width: 1250px) {
+    .cards-header-title {
+        font-size: 3rem;
+    }
+    .card {
+        width: 18rem;
+        height: 19.875rem;
+    }
+    .cards-container {
+        justify-content: space-around;
+    }
+    .card svg {
+        margin-top: 1.875rem;
+        width: 4rem;
+        height: 4rem;
+    }
+    .learn-more-btn {
+        width: 8rem;
+        height: 2.5rem;
+        font-size: 1rem;
+    }
+    .card {
+        font-size: 1.1rem;
+    }
+} */
 
 /* @media (min-width: 1460px) {
     .cards-header-title {

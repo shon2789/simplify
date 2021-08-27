@@ -12,6 +12,30 @@
     margin: 0 auto;
 }
 
+@media (min-width: 700px) {
+    .main-layout {
+        width: 620px;
+    }
+}
+
+@media (min-width: 780px) {
+    .main-layout {
+        width: 700px;
+    }
+}
+
+@media (min-width: 920px) {
+    .main-layout {
+        width: 880px;
+    }
+}
+
+@media (min-width: 1050px) {
+    .main-layout {
+        width: 980px;
+    }
+}
+
 @media (min-width: 1250px) {
     .main-layout {
         width: 1080px;

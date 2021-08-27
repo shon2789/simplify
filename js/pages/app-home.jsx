@@ -5,7 +5,7 @@ export class AppHome extends React.Component {
 
     render() {
         return (
-            <section>
+            <section className="home-app-container">
                 <section className="main-section">
                     <div className="wave">
                         <svg

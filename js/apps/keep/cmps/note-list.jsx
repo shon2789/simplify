@@ -42,6 +42,7 @@ export class NoteList extends React.Component {
         <NoteFilter loadNotes={this.loadNotes} />
         {noteService.checkPinnedNotes() && (
           <React.Fragment>
+
             <h2>Pinned Notes</h2>
             <div className="notes-cards-container ">
               {notes.map((note) => {
@@ -61,6 +62,7 @@ export class NoteList extends React.Component {
                 }
               })}
             </div>
+
           </React.Fragment>
         )}
         <h2>My Notes</h2>
