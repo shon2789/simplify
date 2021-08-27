@@ -33,7 +33,7 @@ export class NotePreview extends React.Component {
 
     return (
       <React.Fragment>
-        <Screen isOpen={isEditClass} exitEdit={this.onEditMode} />
+        <Screen isOpen={isEditClass} exitScreen={this.onEditMode} />
 
         <div
           style={{ backgroundColor: note.color }}

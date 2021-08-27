@@ -1,8 +1,8 @@
-export function Screen({ isOpen, exitEdit }) {
+export function Screen({ isOpen, exitScreen }) {
   return (
     <div
       onClick={() => {
-        exitEdit(false)
+        exitScreen(false)
       }}
       className={`screen ${isOpen ? "screen-active" : ""}`}
     ></div>
