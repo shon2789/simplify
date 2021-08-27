@@ -11,12 +11,13 @@ export class MailSidenav extends React.Component {
   }
 
   setFilter = (value) => {
+    window.innerWidth
     this.setState(
       { filterBy: { ...this.state.filterBy, status: value } },
       () => {
         // this.props.onSetFilter(this.state.filterBy)
         this.props.getCurrStatus(this.state.filterBy.status)
-        this.props.exitScreen()
+        if (window.innerWidth < 920) this.props.exitScreen()
       }
     )
   }
@@ -42,9 +43,8 @@ export class MailSidenav extends React.Component {
           onClick={() => {
             this.setFilter("inbox")
           }}
-          className={`${
-            status === "inbox" ? "active" : ""
-          } side-nav side-nav-inbox`}
+          className={`${status === "inbox" ? "active" : ""
+            } side-nav side-nav-inbox`}
         >
           <div className="side-nav-icon">
             <i className="fas fa-inbox"></i>
