@@ -153,6 +153,19 @@ function _createNotes() {
 }
 
 function query(filterBy = "") {
+  if (filterBy) {
+    if (filterBy === "pinned") {
+      const notesToShow = gNotes.filter((note) => {
+        return note.isPinned
+      })
+      return Promise.resolve(notesToShow)
+    }
+
+    const notesToShow = gNotes.filter((note) => {
+      return note.type === filterBy
+    })
+    return Promise.resolve(notesToShow)
+  }
   return Promise.resolve(gNotes)
 }
 

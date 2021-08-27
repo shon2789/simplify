@@ -57,6 +57,47 @@
   right: 0;
 }
 
+.search-note {
+  font-size: 1.4rem;
+  color: #292929;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border-radius: 10px;
+  height: 2rem;
+  font-size: 0.8rem;
+}
+
+.active-filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2c16b;
+  height: 2rem;
+  border-radius: 7px;
+  padding: 0 5px;
+  color: #292929;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.filter-by-btn {
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  cursor: pointer;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.filter-by-btn:hover {
+  color: #8f8f8f;
+}
+
 @media screen and (min-width: 353px) {
   .note-input {
     width: 22rem;
@@ -80,6 +121,9 @@
     height: 2.875rem;
     font-size: 1.6rem;
   }
+  .search-note {
+    font-size: 1.3rem;
+  }
 
   .note-filter {
     display: flex;
@@ -98,7 +142,7 @@
   .input-container i {
     color: gray;
     position: absolute;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
   }
   .input-container .images-icon {
     right: 45px;

@@ -1,7 +1,7 @@
 import { noteService } from "../services/note.service.js"
-import { NoteEdit } from "./note-edit.jsx"
 import { NoteFilter } from "./note-filter.jsx"
 import { NotePreview } from "./note-preview.jsx"
+import { SearchNote } from "./search-note.jsx"
 
 export class NoteList extends React.Component {
   state = {
@@ -12,8 +12,8 @@ export class NoteList extends React.Component {
     this.loadNotes()
   }
 
-  loadNotes = () => {
-    noteService.query().then((notes) => {
+  loadNotes = (noteType = "") => {
+    noteService.query(noteType).then((notes) => {
       this.setState({ notes })
     })
   }
@@ -39,6 +39,7 @@ export class NoteList extends React.Component {
 
     return (
       <section className="note-list">
+        <SearchNote loadNotes={this.loadNotes} />
         <NoteFilter loadNotes={this.loadNotes} />
         {noteService.checkPinnedNotes() && (
           <React.Fragment>
