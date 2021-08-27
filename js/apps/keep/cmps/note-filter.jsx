@@ -29,6 +29,7 @@ export class NoteFilter extends React.Component {
     noteService.addNote(note)
     this.setState({ note: { ...this.state.note, ["txt"]: "" } })
     this.props.loadNotes()
+    this.props.onFilterBy()
   }
 
   render() {

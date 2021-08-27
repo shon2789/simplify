@@ -6,6 +6,7 @@ import { SearchNote } from "./search-note.jsx"
 export class NoteList extends React.Component {
   state = {
     notes: null,
+    sortBy: "",
   }
 
   componentDidMount() {
@@ -33,14 +34,23 @@ export class NoteList extends React.Component {
     this.loadNotes()
   }
 
+  onFilterBy = (noteType) => {
+    this.loadNotes(noteType)
+    this.setState({ sortBy: noteType })
+  }
+
   render() {
     const { notes } = this.state
     if (!notes) return <div>Loading...</div>
 
     return (
       <section className="note-list">
-        <SearchNote loadNotes={this.loadNotes} />
-        <NoteFilter loadNotes={this.loadNotes} />
+        <SearchNote
+          loadNotes={this.loadNotes}
+          onFilterBy={this.onFilterBy}
+          sortBy={this.state.sortBy}
+        />
+        <NoteFilter loadNotes={this.loadNotes} onFilterBy={this.onFilterBy} />
         {noteService.checkPinnedNotes() && (
           <React.Fragment>
             <h2 className="pinned-note-h2">Pinned Notes</h2>
