@@ -23,8 +23,8 @@
 
 .edit-mode {
   z-index: 1;
-  width: 20rem;
-  min-height: 20rem;
+  width: 17rem;
+  min-height: 17rem;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -207,4 +207,11 @@
 .screen-active {
   filter: opacity(1);
   pointer-events: visible;
+}
+
+@media screen and (min-width: 353px) {
+  .edit-mode {
+    width: 20rem;
+    min-height: 20rem;
+  }
 }

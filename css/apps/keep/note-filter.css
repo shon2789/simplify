@@ -1,5 +1,5 @@
 .note-input {
-  width: 22rem;
+  width: 20rem;
   height: 2.375rem;
   border-radius: 16px;
   outline: none;
@@ -55,6 +55,13 @@
 }
 .input-container .video-icon {
   right: 0;
+}
+
+@media screen and (min-width: 353px) {
+  .note-input {
+    width: 22rem;
+    height: 2.375rem;
+  }
 }
 
 @media screen and (min-width: 460px) {
