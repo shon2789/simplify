@@ -235,6 +235,19 @@ function addNote(note) {
       },
     }
   }
+
+  if (note.type === "note-subject") {
+
+    newNote = {
+      id: utilService.makeId(),
+      type: 'note-txt',
+      isPinned: true,
+      info: {
+        txt: `${note.txt}`,
+        subject: `${note.subject}`
+      },
+    }
+  }
   gNotes.push(newNote)
   _saveNotesToStorage()
   return Promise.resolve()

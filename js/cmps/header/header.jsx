@@ -18,7 +18,6 @@ class _Header extends React.Component {
     componentDidMount() {
         if (!this.state.unReadMails) mailService.getAllUnreadMails().then((unReadMails) => { this.setState({ unReadMails }) })
         this.removeEventBus = eventBusService.on('mails-count', (unReadMails) => {
-            console.log(unReadMails)
             this.setState({ unReadMails })
         })
     }
@@ -27,7 +26,6 @@ class _Header extends React.Component {
         this.removeEventBus()
     }
     render() {
-        console.log(this.state.unReadMails)
         return (
             <section className="header">
                 <div className="header-container main-layout">

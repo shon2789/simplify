@@ -1,3 +1,9 @@
-export function NoteTxt({ txt }) {
-  return <h1>{txt}</h1>
+export function NoteTxt({ txt, subject }) {
+  return (
+    <React.Fragment>
+      {subject && <h1>{subject}</h1>}
+      <p>{txt}</p>
+    </React.Fragment>
+
+  )
 }

@@ -9,6 +9,15 @@ export class NoteFilter extends React.Component {
     },
   }
 
+  componentDidMount() {
+    // console.log(this.props.location.search)
+    this.noteFromMail();
+  }
+
+  noteFromMail = () => {
+    console.log(this.props.location);
+  }
+
   changeNoteType = (type) => {
     this.setState({ note: { ...this.state.note, ["type"]: type, ["txt"]: "" } })
   }
@@ -32,9 +41,11 @@ export class NoteFilter extends React.Component {
     this.props.onFilterBy()
   }
 
+
+
+
   render() {
     let { txt } = this.state.note
-
     return (
       <div className="note-filter">
         <div className="input-container">

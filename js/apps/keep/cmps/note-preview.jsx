@@ -45,7 +45,7 @@ export class NotePreview extends React.Component {
           style={{ backgroundColor: note.color }}
           className={`${isEditClass ? "edit-mode" : ""} note-preview`}
         >
-          {note.type === "note-txt" && <NoteTxt txt={note.info.txt} />}
+          {note.type === "note-txt" && <NoteTxt txt={note.info.txt} subject={note.info.subject} />}
           {note.type === "note-video" && <NoteVideo video={note.info.url} />}
           {note.type === "note-img" && (
             <NoteImg title={note.info.title} img={note.info.url} />

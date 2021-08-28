@@ -2,6 +2,8 @@ import { utilService } from "../../../services/util.service.js"
 import { noteService } from "../../keep/services/note.service.js"
 import { mailService } from "../sevices/mail.service.js"
 
+const { Link } = ReactRouterDOM
+
 export class MailCompose extends React.Component {
   state = {
     mail: {
@@ -16,6 +18,8 @@ export class MailCompose extends React.Component {
     this.composeFromNote()
   }
 
+
+
   composeFromNote = () => {
     const noteId = this.props.match.params.noteId
     if (!noteId) return
@@ -27,7 +31,6 @@ export class MailCompose extends React.Component {
   }
 
   handleChange = ({ target }) => {
-    console.log(target.name)
     const field = target.name
     const value = target.value
     if (field === "from") return
@@ -56,8 +59,9 @@ export class MailCompose extends React.Component {
         <div className="mail-compose-container">
           <div className="mail-compose-top">
             <h1>New Mail</h1>
-            <div onClick={this.onSendMail} className="new-mail-btn">
-              <i className="new-mail-send-btn fas fa-paper-plane"></i>
+            <div className="new-mail-btn">
+              <Link to={`/keep?subject=${mail.subject}&body=${mail.body}`}><i className="to-note-icon fas fa-sticky-note"></i></Link>
+              <i onClick={this.onSendMail} className="new-mail-send-btn fas fa-paper-plane"></i>
             </div>
           </div>
           <div className="mail-compose-header">

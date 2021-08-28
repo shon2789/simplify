@@ -78,14 +78,14 @@
   opacity: 1;
 }
 
-.new-mail-send-btn {
+.new-mail-send-btn, .to-note-icon {
   color: #f2c16b;
   font-size: 1.5rem;
   cursor: pointer;
-  opacity: 0.6;
+  opacity: 0.8;
   transition: opacity 0.3s;
 }
 
-.new-mail-send-btn:hover {
+.new-mail-send-btn:hover, .to-note-icon:hover {
   opacity: 1;
 }

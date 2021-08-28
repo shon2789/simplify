@@ -34,7 +34,6 @@ export class MailApp extends React.Component {
 
   countUnreadMails = () => {
     mailService.getAllUnreadMails().then((num) => {
-      console.log(num)
       eventBusService.emit("mails-count", num)
     })
   }

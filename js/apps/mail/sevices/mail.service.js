@@ -126,7 +126,6 @@ function _createMails() {
 
 
 function query(filterBy) {
-    console.log(filterBy);
     if (filterBy) {
         let { txt } = filterBy
         txt.toUpperCase();
