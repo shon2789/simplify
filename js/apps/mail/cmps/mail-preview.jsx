@@ -28,13 +28,7 @@ export class MailPreview extends React.Component {
         mailService.deleteMail(this.props.mail.id).then(this.props.loadMails())
     }
 
-    // markMailAsRead = () => {
-    //     this.setState({ mail: { ...this.state.mail, isRead: true } }, () => {
-    //         mailService.onReadMail(this.state.mail.id).then(() => {
-    //             this.props.loadMails();
-    //         })
-    //     })
-    // }
+
 
     render() {
         const { mail } = this.props;
