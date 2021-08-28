@@ -56,7 +56,7 @@ export class BookAdd extends React.Component {
             id="new-book"
             value={bookName}
             onChange={this.handleChange}
-            placeholder="Book Name"
+            placeholder="Search By Name"
           />
           <button
             className="search-book-btn"
