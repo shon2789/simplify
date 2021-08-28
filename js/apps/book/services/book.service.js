@@ -684,7 +684,7 @@ function deleteReview(bookId, reviewIdx) {
 }
 
 function addGoogleBook(googleBook) {
-  console.log(googleBook)
+ 
   const book = {
     id: googleBook.id,
     reviews: [],
