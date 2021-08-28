@@ -114,7 +114,6 @@
 
 .review-form textarea, option, input {
   outline: none;
-  font-size: 1.1rem;
 }
 
 .review-form.show-review-form {
