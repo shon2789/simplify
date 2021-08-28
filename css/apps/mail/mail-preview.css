@@ -54,7 +54,7 @@
   cursor: pointer;
 }
 
-.form-container {
+.form-container-mail {
   margin-top: 2rem;
 }
 
@@ -200,8 +200,7 @@
   }
 }
 
-@media (min-width: 1450px) {
-}
+@media (min-width: 1450px) {}
 
 @media (min-width: 1620px) {
   .mail-preview {
@@ -258,8 +257,7 @@
   .delete-mail:hover {
     opacity: 1;
   }
-  .mail-from-preview {
-  }
+  .mail-from-preview {}
   .mail-sent-time-preview {
     text-align: right;
   }

@@ -33,7 +33,7 @@ export class MailList extends React.Component {
     if (!mails) return <div>Loading...</div>
     return (
       <section className="mails-container main-layout">
-        <div className="form-container">
+        <div className="form-container-mail">
           <div className="mail-search-container">
             <i
               onClick={() => {
