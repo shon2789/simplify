@@ -130,7 +130,7 @@ function query(filterBy) {
         let { txt } = filterBy
         txt.toUpperCase();
         const txtFilteredMails = gEmails.filter(mail => {
-            return mail.subject.toLowerCase().includes(txt)
+            return mail.subject.toLowerCase().includes(txt) || mail.body.toLowerCase().includes(txt) || mail.from.toLowerCase().includes(txt)
         })
         var mails = (txtFilteredMails) ? mails = txtFilteredMails : mails = gEmails;
 
