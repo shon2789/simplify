@@ -1,5 +1,5 @@
-import { storageService } from "../../../services/storage.service.js";
-import { utilService } from "../../../services/util.service.js";
+import { storageService } from "../../../services/storage.service.js"
+import { utilService } from "../../../services/util.service.js"
 
 export const mailService = {
     query,
@@ -8,112 +8,112 @@ export const mailService = {
     ToggleStar,
     sendMail,
     onReadMail,
-    getAllUnreadMails
+    getAllUnreadMails,
 }
-const KEY = 'mailsDB';
+const KEY = "mailsDB"
 let gEmails = [
     {
         id: utilService.makeId(),
-        from: 'Jonathan',
-        subject: 'Miss you!',
+        from: "Jonathan",
+        subject: "H!",
         body: utilService.makeLorem(),
         isRead: false,
         sentAt: 155114120594,
-        to: 'shon@simplify.com',
+        to: "shon@simplify.com",
         isStarred: false,
-        status: 'inbox'
+        status: "inbox",
     },
     {
         id: utilService.makeId(),
-        from: 'You',
-        subject: 'Hello!',
+        from: "You",
+        subject: "Hello!",
         body: utilService.makeLorem(),
         isRead: true,
         sentAt: 1551133930594,
-        to: 'Raz',
+        to: "Raz",
         isStarred: false,
-        status: 'sent'
+        status: "sent",
     },
     {
         id: utilService.makeId(),
-        from: 'Dana',
-        subject: 'Have you seen my post?',
+        from: "Dana",
+        subject: "Have you seen my post?",
         body: utilService.makeLorem(),
         isRead: false,
         sentAt: 1551133930594,
-        to: 'shon@simplify.com',
+        to: "shon@simplify.com",
         isStarred: false,
-        status: 'inbox'
+        status: "inbox",
     },
     {
         id: utilService.makeId(),
-        from: 'Yohanan',
-        subject: 'Did you hear the news?!',
+        from: "Yohanan",
+        subject: "Did you hear the news?!",
         body: utilService.makeLorem(),
         isRead: true,
         sentAt: 1551133930594,
-        to: 'shon@simplify.com',
+        to: "shon@simplify.com",
         isStarred: false,
-        status: 'inbox'
+        status: "inbox",
     },
     {
         id: utilService.makeId(),
-        from: 'Yuval',
-        subject: 'Check it out',
+        from: "Yuval",
+        subject: "Check it out",
         body: utilService.makeLorem(),
         isRead: false,
         sentAt: 1551133930594,
-        to: 'shon@simplify.com',
+        to: "shon@simplify.com",
         isStarred: false,
-        status: 'inbox'
+        status: "inbox",
     },
     {
         id: utilService.makeId(),
-        from: 'Farfetch',
-        subject: 'Your Order has been shipped',
+        from: "Farfetch",
+        subject: "Your Order has been shipped",
         body: utilService.makeLorem(),
         isRead: false,
         sentAt: 1551133930594,
-        to: 'shon@simplify.com',
+        to: "shon@simplify.com",
         isStarred: false,
-        status: 'inbox'
+        status: "inbox",
     },
     {
         id: utilService.makeId(),
-        from: 'You',
-        subject: 'Please hire me!',
+        from: "You",
+        subject: "Please hire me!",
         body: utilService.makeLorem(),
         isRead: true,
         sentAt: 1551133930594,
-        to: 'stevejobs@apple.com',
+        to: "stevejobs@apple.com",
         isStarred: false,
-        status: 'sent'
+        status: "sent",
     },
     {
         id: utilService.makeId(),
-        from: 'You',
-        subject: 'I want free money',
+        from: "You",
+        subject: "I want free money",
         body: utilService.makeLorem(),
         isRead: true,
         sentAt: 1551133930594,
-        to: 'bank@leumi.co.il',
+        to: "bank@leumi.co.il",
         isStarred: false,
-        status: 'sent'
+        status: "sent",
     },
     {
         id: utilService.makeId(),
-        from: 'You',
-        subject: 'Let\'s play',
+        from: "You",
+        subject: "Let's play",
         body: utilService.makeLorem(),
         isRead: true,
         sentAt: 1551133930594,
-        to: 'Jonathan@Simplify.com',
+        to: "Jonathan@Simplify.com",
         isStarred: false,
-        status: 'sent'
-    }
+        status: "sent",
+    },
 ]
 
-_createMails();
+_createMails()
 
 function _createMails() {
     let mails = storageService.loadFromStorage(KEY)
@@ -124,45 +124,43 @@ function _createMails() {
     _saveNotesToStorage()
 }
 
-
 function query(filterBy) {
     if (filterBy) {
         let { txt } = filterBy
-        txt.toUpperCase();
-        const txtFilteredMails = gEmails.filter(mail => {
+        txt.toUpperCase()
+        const txtFilteredMails = gEmails.filter((mail) => {
             return mail.subject.toLowerCase().includes(txt) || mail.body.toLowerCase().includes(txt) || mail.from.toLowerCase().includes(txt)
         })
-        var mails = (txtFilteredMails) ? mails = txtFilteredMails : mails = gEmails;
+        var mails = txtFilteredMails
+            ? (mails = txtFilteredMails)
+            : (mails = gEmails)
 
-        let mailsToShow;
+        let mailsToShow
         switch (filterBy.status) {
-            case 'inbox':
-                mailsToShow = mails.filter(mail => {
-
-                    return mail.status === 'inbox'
+            case "inbox":
+                mailsToShow = mails.filter((mail) => {
+                    return mail.status === "inbox"
                 })
-                return Promise.resolve(mailsToShow);
+                return Promise.resolve(mailsToShow)
 
-            case 'starred':
-                mailsToShow = mails.filter(mail => {
-                    return mail.isStarred;
-                });
-                return Promise.resolve(mailsToShow);
+            case "starred":
+                mailsToShow = mails.filter((mail) => {
+                    return mail.isStarred
+                })
+                return Promise.resolve(mailsToShow)
 
-            case 'sent':
-                mailsToShow = mails.filter(mail => {
-                    return mail.status === 'sent';
-                });
-                return Promise.resolve(mailsToShow);
+            case "sent":
+                mailsToShow = mails.filter((mail) => {
+                    return mail.status === "sent"
+                })
+                return Promise.resolve(mailsToShow)
         }
-
-
     }
-    const inboxMails = gEmails.filter(mail => {
-        return mail.status === 'inbox'
+    const inboxMails = gEmails.filter((mail) => {
+        return mail.status === "inbox"
     })
 
-    return Promise.resolve(inboxMails);
+    return Promise.resolve(inboxMails)
 }
 
 function getMailById(mailId) {
@@ -185,7 +183,7 @@ function ToggleStar(mailId) {
     var mailIdx = gEmails.findIndex(function (mail) {
         return mailId === mail.id
     })
-    gEmails[mailIdx].isStarred = !gEmails[mailIdx].isStarred;
+    gEmails[mailIdx].isStarred = !gEmails[mailIdx].isStarred
     _saveNotesToStorage()
     return Promise.resolve()
 }
@@ -193,32 +191,31 @@ function ToggleStar(mailId) {
 function sendMail(mail) {
     const newMail = {
         id: utilService.makeId(),
-        from: 'You',
+        from: "You",
         subject: mail.subject,
         body: mail.body,
         isRead: true,
         sentAt: Date.now(),
         to: mail.to,
         isStarred: false,
-        status: 'sent'
+        status: "sent",
     }
-    gEmails.push(newMail);
+    gEmails.push(newMail)
     _saveNotesToStorage()
-    return Promise.resolve();
+    return Promise.resolve()
 }
 
 function onReadMail(mailId) {
     var mailIdx = gEmails.findIndex(function (mail) {
         return mailId === mail.id
     })
-    gEmails[mailIdx].isRead = true;
-    _saveNotesToStorage();
+    gEmails[mailIdx].isRead = true
+    _saveNotesToStorage()
     return Promise.resolve()
 }
 
 function getAllUnreadMails() {
-
-    const unReadMails = gEmails.filter(mail => {
+    const unReadMails = gEmails.filter((mail) => {
         return !mail.isRead
     })
     return Promise.resolve(unReadMails.length)
