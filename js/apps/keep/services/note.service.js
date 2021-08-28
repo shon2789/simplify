@@ -247,7 +247,7 @@ function addNote(note) {
       },
     }
   }
-  gNotes.push(newNote)
+  gNotes.unshift(newNote)
   _saveNotesToStorage()
   return Promise.resolve()
 }
