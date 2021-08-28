@@ -187,7 +187,6 @@ function deleteNote(noteId) {
 }
 
 function addNote(note) {
-  console.log(note)
 
   let newNote
   if (note.type === "note-txt") {
@@ -351,7 +350,7 @@ function getNoteContentByType(note) {
     note.info.todos.forEach((todo) => {
       todos.push(todo.txt)
     })
-    console.log(todos)
+ 
     return todos.join(", ")
   }
 }

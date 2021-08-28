@@ -35,7 +35,6 @@ export class NotePreview extends React.Component {
   render() {
     const { note, isEditClass, isPallateClicked } = this.state
     if (!note) return <div>Loading...</div>
-    // if (!video) return <div>Loading...</div>
 
     return (
       <React.Fragment>

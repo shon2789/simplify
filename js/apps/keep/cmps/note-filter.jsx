@@ -9,15 +9,6 @@ export class NoteFilter extends React.Component {
     },
   }
 
-  componentDidMount() {
-    // console.log(this.props.location.search)
-    this.noteFromMail();
-  }
-
-  noteFromMail = () => {
-    console.log(this.props.location);
-  }
-
   changeNoteType = (type) => {
     this.setState({ note: { ...this.state.note, ["type"]: type, ["txt"]: "" } })
   }
