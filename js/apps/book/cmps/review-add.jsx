@@ -1,6 +1,7 @@
 import { bookService } from "../services/book.service.js"
 import { utilService } from "../../../services/util.service.js"
 import { BookReviews } from "./book-reviews.jsx"
+import { Screen } from "../../keep/cmps/screen.jsx"
 
 export class ReviewAdd extends React.Component {
   state = {
@@ -46,9 +47,13 @@ export class ReviewAdd extends React.Component {
 
     return (
       <section>
+        <Screen
+          isOpen={this.props.isReviewModalOpen}
+          exitScreen={this.props.toggleAddReviewModal}
+        />
         <form
           className={`review-form ${
-            this.props.isReviewModalOpen && "hide-reviews-form"
+            this.props.isReviewModalOpen && "show-review-form"
           }`}
         >
           <label htmlFor="name">Full Name: </label>

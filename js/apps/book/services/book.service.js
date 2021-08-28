@@ -16,7 +16,26 @@ export const bookService = {
 var gBooks = [
   {
     id: "OXeMG8wNskc",
-    reviews: [],
+    reviews: [
+      {
+        name: "Shmulik",
+        rate: "⭐⭐⭐",
+        date: "2021-08-28",
+        text: "I grew absolutely tired with King’s more recent novels obsessing over Donald Trump. I figured it would be a thing of the past considering he’s no longer President but boy was I wrong. Within the first 50 pages I believe there were about five or six Trump references.",
+      },
+      {
+        name: "Shmulik",
+        rate: "⭐",
+        date: "2021-04-29",
+        text: "I have always been a big Stephen King fan, I have all his works and love them. But....this is a big disappointment.",
+      },
+      {
+        name: "Shmulik",
+        rate: "⭐⭐⭐⭐⭐",
+        date: "2020-02-09",
+        text: "This latest work from King is another thriller/crime novel. There are 24 chapters, and about 515 pages of story.",
+      },
+    ],
     title: "metus hendrerit",
     subtitle: "mi est eros convallis auctor arcu dapibus himenaeos",
     authors: ["Barbara Cartland"],
@@ -35,7 +54,26 @@ var gBooks = [
   },
   {
     id: "JYOJa2NpSCq",
-    reviews: [],
+    reviews: [
+      {
+        name: "Shmulik",
+        rate: "⭐⭐⭐",
+        date: "2021-08-28",
+        text: "I grew absolutely tired with King’s more recent novels obsessing over Donald Trump. I figured it would be a thing of the past considering he’s no longer President but boy was I wrong. Within the first 50 pages I believe there were about five or six Trump references.",
+      },
+      {
+        name: "Shmulik",
+        rate: "⭐",
+        date: "2021-04-29",
+        text: "I have always been a big Stephen King fan, I have all his works and love them. But....this is a big disappointment.",
+      },
+      {
+        name: "Shmulik",
+        rate: "⭐⭐⭐⭐⭐",
+        date: "2020-02-09",
+        text: "This latest work from King is another thriller/crime novel. There are 24 chapters, and about 515 pages of story.",
+      },
+    ],
     title: "morbi",
     subtitle: "lorem euismod dictumst inceptos mi",
     authors: ["Barbara Cartland"],
@@ -54,7 +92,26 @@ var gBooks = [
   },
   {
     id: "1y0Oqts35DQ",
-    reviews: [],
+    reviews: [
+      {
+        name: "Shmulik",
+        rate: "⭐⭐⭐",
+        date: "2021-08-28",
+        text: "I grew absolutely tired with King’s more recent novels obsessing over Donald Trump. I figured it would be a thing of the past considering he’s no longer President but boy was I wrong. Within the first 50 pages I believe there were about five or six Trump references.",
+      },
+      {
+        name: "Shmulik",
+        rate: "⭐",
+        date: "2021-04-29",
+        text: "I have always been a big Stephen King fan, I have all his works and love them. But....this is a big disappointment.",
+      },
+      {
+        name: "Shmulik",
+        rate: "⭐⭐⭐⭐⭐",
+        date: "2020-02-09",
+        text: "This latest work from King is another thriller/crime novel. There are 24 chapters, and about 515 pages of story.",
+      },
+    ],
     title: "at viverra venenatis",
     subtitle: "gravida libero facilisis rhoncus urna etiam",
     authors: ["Dr. Seuss"],
@@ -73,7 +130,26 @@ var gBooks = [
   },
   {
     id: "kSnfIJyikTP",
-    reviews: [],
+    reviews: [
+      {
+        name: "Shmulik",
+        rate: "⭐⭐⭐",
+        date: "2021-08-28",
+        text: "I grew absolutely tired with King’s more recent novels obsessing over Donald Trump. I figured it would be a thing of the past considering he’s no longer President but boy was I wrong. Within the first 50 pages I believe there were about five or six Trump references.",
+      },
+      {
+        name: "Shmulik",
+        rate: "⭐",
+        date: "2021-04-29",
+        text: "I have always been a big Stephen King fan, I have all his works and love them. But....this is a big disappointment.",
+      },
+      {
+        name: "Shmulik",
+        rate: "⭐⭐⭐⭐⭐",
+        date: "2020-02-09",
+        text: "This latest work from King is another thriller/crime novel. There are 24 chapters, and about 515 pages of story.",
+      },
+    ],
     title: "dictum",
     subtitle:
       "augue eu consectetur class curabitur conubia ligula in ullamcorper",
@@ -93,7 +169,26 @@ var gBooks = [
   },
   {
     id: "f4iuVmbuKCC",
-    reviews: [],
+    reviews: [
+      {
+        name: "Shmulik",
+        rate: "⭐⭐⭐",
+        date: "2021-08-28",
+        text: "I grew absolutely tired with King’s more recent novels obsessing over Donald Trump. I figured it would be a thing of the past considering he’s no longer President but boy was I wrong. Within the first 50 pages I believe there were about five or six Trump references.",
+      },
+      {
+        name: "Shmulik",
+        rate: "⭐",
+        date: "2021-04-29",
+        text: "I have always been a big Stephen King fan, I have all his works and love them. But....this is a big disappointment.",
+      },
+      {
+        name: "Shmulik",
+        rate: "⭐⭐⭐⭐⭐",
+        date: "2020-02-09",
+        text: "This latest work from King is another thriller/crime novel. There are 24 chapters, and about 515 pages of story.",
+      },
+    ],
     title: "sem himenaeos aptent",
     subtitle: "interdum per habitasse luctus purus est",
     authors: ["Dr. Seuss"],
@@ -112,7 +207,26 @@ var gBooks = [
   },
   {
     id: "U2rfZO6oBZf",
-    reviews: [],
+    reviews: [
+      {
+        name: "Shmulik",
+        rate: "⭐⭐⭐",
+        date: "2021-08-28",
+        text: "I grew absolutely tired with King’s more recent novels obsessing over Donald Trump. I figured it would be a thing of the past considering he’s no longer President but boy was I wrong. Within the first 50 pages I believe there were about five or six Trump references.",
+      },
+      {
+        name: "Shmulik",
+        rate: "⭐",
+        date: "2021-04-29",
+        text: "I have always been a big Stephen King fan, I have all his works and love them. But....this is a big disappointment.",
+      },
+      {
+        name: "Shmulik",
+        rate: "⭐⭐⭐⭐⭐",
+        date: "2020-02-09",
+        text: "This latest work from King is another thriller/crime novel. There are 24 chapters, and about 515 pages of story.",
+      },
+    ],
     title: "mi ante posuere",
     subtitle:
       "sapien curae consectetur ultrices fringilla blandit ipsum curae faucibus",
@@ -132,7 +246,26 @@ var gBooks = [
   },
   {
     id: "xI0wrXaaAcq",
-    reviews: [],
+    reviews: [
+      {
+        name: "Shmulik",
+        rate: "⭐⭐⭐",
+        date: "2021-08-28",
+        text: "I grew absolutely tired with King’s more recent novels obsessing over Donald Trump. I figured it would be a thing of the past considering he’s no longer President but boy was I wrong. Within the first 50 pages I believe there were about five or six Trump references.",
+      },
+      {
+        name: "Shmulik",
+        rate: "⭐",
+        date: "2021-04-29",
+        text: "I have always been a big Stephen King fan, I have all his works and love them. But....this is a big disappointment.",
+      },
+      {
+        name: "Shmulik",
+        rate: "⭐⭐⭐⭐⭐",
+        date: "2020-02-09",
+        text: "This latest work from King is another thriller/crime novel. There are 24 chapters, and about 515 pages of story.",
+      },
+    ],
     title: "non",
     subtitle:
       "leo tortor per dapibus mattis ut conubia porttitor ligula viverra",
@@ -152,7 +285,26 @@ var gBooks = [
   },
   {
     id: "9laHCEdSpFy",
-    reviews: [],
+    reviews: [
+      {
+        name: "Shmulik",
+        rate: "⭐⭐⭐",
+        date: "2021-08-28",
+        text: "I grew absolutely tired with King’s more recent novels obsessing over Donald Trump. I figured it would be a thing of the past considering he’s no longer President but boy was I wrong. Within the first 50 pages I believe there were about five or six Trump references.",
+      },
+      {
+        name: "Shmulik",
+        rate: "⭐",
+        date: "2021-04-29",
+        text: "I have always been a big Stephen King fan, I have all his works and love them. But....this is a big disappointment.",
+      },
+      {
+        name: "Shmulik",
+        rate: "⭐⭐⭐⭐⭐",
+        date: "2020-02-09",
+        text: "This latest work from King is another thriller/crime novel. There are 24 chapters, and about 515 pages of story.",
+      },
+    ],
     title: "tristique",
     subtitle: "consectetur a eu tincidunt condimentum amet nisi",
     authors: ["Dr. Seuss"],
@@ -171,7 +323,26 @@ var gBooks = [
   },
   {
     id: "nGhVwZvGCGp",
-    reviews: [],
+    reviews: [
+      {
+        name: "Shmulik",
+        rate: "⭐⭐⭐",
+        date: "2021-08-28",
+        text: "I grew absolutely tired with King’s more recent novels obsessing over Donald Trump. I figured it would be a thing of the past considering he’s no longer President but boy was I wrong. Within the first 50 pages I believe there were about five or six Trump references.",
+      },
+      {
+        name: "Shmulik",
+        rate: "⭐",
+        date: "2021-04-29",
+        text: "I have always been a big Stephen King fan, I have all his works and love them. But....this is a big disappointment.",
+      },
+      {
+        name: "Shmulik",
+        rate: "⭐⭐⭐⭐⭐",
+        date: "2020-02-09",
+        text: "This latest work from King is another thriller/crime novel. There are 24 chapters, and about 515 pages of story.",
+      },
+    ],
     title: "urna ornare gravida",
     subtitle: "sem vestibulum semper convallis pharetra tempor himenaeos ut",
     authors: ["Jin Yong"],
@@ -190,7 +361,26 @@ var gBooks = [
   },
   {
     id: "Q8Q9Lsd03BD",
-    reviews: [],
+    reviews: [
+      {
+        name: "Shmulik",
+        rate: "⭐⭐⭐",
+        date: "2021-08-28",
+        text: "I grew absolutely tired with King’s more recent novels obsessing over Donald Trump. I figured it would be a thing of the past considering he’s no longer President but boy was I wrong. Within the first 50 pages I believe there were about five or six Trump references.",
+      },
+      {
+        name: "Shmulik",
+        rate: "⭐",
+        date: "2021-04-29",
+        text: "I have always been a big Stephen King fan, I have all his works and love them. But....this is a big disappointment.",
+      },
+      {
+        name: "Shmulik",
+        rate: "⭐⭐⭐⭐⭐",
+        date: "2020-02-09",
+        text: "This latest work from King is another thriller/crime novel. There are 24 chapters, and about 515 pages of story.",
+      },
+    ],
     title: "consequat neque volutpat",
     subtitle: "vel quis taciti fermentum feugiat ullamcorper curae praesent",
     authors: ["Dr. Seuss"],
@@ -209,7 +399,26 @@ var gBooks = [
   },
   {
     id: "bd7a76kARao",
-    reviews: [],
+    reviews: [
+      {
+        name: "Shmulik",
+        rate: "⭐⭐⭐",
+        date: "2021-08-28",
+        text: "I grew absolutely tired with King’s more recent novels obsessing over Donald Trump. I figured it would be a thing of the past considering he’s no longer President but boy was I wrong. Within the first 50 pages I believe there were about five or six Trump references.",
+      },
+      {
+        name: "Shmulik",
+        rate: "⭐",
+        date: "2021-04-29",
+        text: "I have always been a big Stephen King fan, I have all his works and love them. But....this is a big disappointment.",
+      },
+      {
+        name: "Shmulik",
+        rate: "⭐⭐⭐⭐⭐",
+        date: "2020-02-09",
+        text: "This latest work from King is another thriller/crime novel. There are 24 chapters, and about 515 pages of story.",
+      },
+    ],
     title: "risus",
     subtitle: "pretium bibendum pharetra curabitur quisque dictumst",
     authors: ["Danielle Steel"],
@@ -228,7 +437,26 @@ var gBooks = [
   },
   {
     id: "qKyG0vqeO3e",
-    reviews: [],
+    reviews: [
+      {
+        name: "Shmulik",
+        rate: "⭐⭐⭐",
+        date: "2021-08-28",
+        text: "I grew absolutely tired with King’s more recent novels obsessing over Donald Trump. I figured it would be a thing of the past considering he’s no longer President but boy was I wrong. Within the first 50 pages I believe there were about five or six Trump references.",
+      },
+      {
+        name: "Shmulik",
+        rate: "⭐",
+        date: "2021-04-29",
+        text: "I have always been a big Stephen King fan, I have all his works and love them. But....this is a big disappointment.",
+      },
+      {
+        name: "Shmulik",
+        rate: "⭐⭐⭐⭐⭐",
+        date: "2020-02-09",
+        text: "This latest work from King is another thriller/crime novel. There are 24 chapters, and about 515 pages of story.",
+      },
+    ],
     title: "interdum etiam vulputate",
     subtitle: "velit sapien eget tincidunt nunc tortor",
     authors: ["Danielle Steel"],
@@ -432,7 +660,6 @@ function getBookById(bookId) {
 }
 
 function addReview(review, bookId) {
-  console.log(review)
   if (!review.rate || review.rate === "1") review.rate = "⭐"
   if (review.rate === "2") review.rate = "⭐⭐"
   if (review.rate === "3") review.rate = "⭐⭐⭐"
