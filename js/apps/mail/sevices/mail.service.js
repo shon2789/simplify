@@ -184,6 +184,11 @@ function query(filterBy) {
                     return mail.status === "trash"
                 })
                 return Promise.resolve(mailsToShow)
+            case "draft":
+                mailsToShow = mails.filter((mail) => {
+                    return mail.status === "draft"
+                })
+                return Promise.resolve(mailsToShow)
         }
     }
     const inboxMails = gEmails.filter((mail) => {
@@ -225,7 +230,7 @@ function ToggleStar(mailId) {
     return Promise.resolve()
 }
 
-function sendMail(mail) {
+function sendMail(mail, isDrafted = false) {
     const newMail = {
         id: utilService.makeId(),
         from: "You",
@@ -235,7 +240,7 @@ function sendMail(mail) {
         sentAt: Date.now(),
         to: mail.to,
         isStarred: false,
-        status: "sent",
+        status: `${isDrafted ? 'draft' : 'sent'}`,
     }
     gEmails.unshift(newMail)
     _saveNotesToStorage()
@@ -250,6 +255,7 @@ function onReadMail(mailId) {
     _saveNotesToStorage()
     return Promise.resolve()
 }
+
 
 
 function getAllUnreadMails() {

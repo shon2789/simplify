@@ -2,7 +2,3 @@
 @import "./book-preview.css";
 @import "./book-filter.css";
 @import "./book-details.css";
-
-.book-app-container {
-  min-height: calc(100vh - 15rem);
-}

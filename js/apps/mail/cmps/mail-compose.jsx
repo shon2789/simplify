@@ -46,7 +46,10 @@ export class MailCompose extends React.Component {
   }
 
   onBack = () => {
+    // mailService.sendMail(this.state.mail, true).then(() => {
+    // })
     this.props.history.push("/mail")
+
   }
 
   render() {
@@ -76,7 +79,7 @@ export class MailCompose extends React.Component {
                   id="to"
                   type="email"
                   placeholder="To:"
-                  required
+
                 />
               </div>
               <div className="input-container-compose">
@@ -87,7 +90,7 @@ export class MailCompose extends React.Component {
                   id="from"
                   type="email"
                   placeholder="From: Shon@simplify.com"
-                  required
+
                 />
               </div>
               <div className="input-container-compose">

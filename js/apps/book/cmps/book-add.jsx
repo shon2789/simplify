@@ -21,21 +21,22 @@ export class BookAdd extends React.Component {
     )
   }
 
+
   // handleChange = ({ target }) => {
-  //     const bookName = target.value;
-  //     this.setState({ bookName })
+  //   const bookName = target.value;
+  //   this.setState({ bookName })
   // }
 
   // searchBook = (ev) => {
-  //     ev.preventDefault();
-  //     this.getBooksToShow();
-  //     // this.setState({ bookName: '' })
+  //   ev.preventDefault();
+  //   this.getBooksToShow();
+  //   this.setState({ bookName: '' })
   // }
 
   // getBooksToShow = () => {
-  //     bookService.showGoogleBooks(this.state.bookName).then((booksToShow) => {
-  //         this.setState({ booksToShow })
-  //     })
+  //   bookService.showGoogleBooks(this.state.bookName).then((booksToShow) => {
+  //     this.setState({ booksToShow })
+  //   })
   // }
 
   onAddBook = (book) => {
@@ -48,7 +49,7 @@ export class BookAdd extends React.Component {
     const { bookName, booksToShow } = this.state
     return (
       <section>
-        <form>
+        <form className="add-book-form-container">
           <label htmlFor="new-book">Add Book: </label>
           <input
             type="text"

@@ -140,7 +140,7 @@ export class BookDetails extends React.Component {
               </div>
             </div>
           </div>
-
+          <h1 className="reviews-title">Reviews:</h1>
           <ReviewAdd
             book={book}
             toggleAddReviewModal={this.toggleAddReviewModal}

@@ -77,11 +77,11 @@ export class MailSidenav extends React.Component {
           Sent
         </div>
         <div
-          value="drafts"
+          value="draft"
           onClick={() => {
-            this.setFilter("drafts")
+            this.setFilter("draft")
           }}
-          className={`${status === "drafts" ? "active" : ""} side-nav`}
+          className={`${status === "draft" ? "active" : ""} side-nav`}
         >
           <div className="side-nav-icon">
             <i className="fas fa-file"></i>

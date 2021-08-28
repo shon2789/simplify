@@ -1,12 +1,9 @@
 .books-container {
   display: flex;
   justify-content: center;
-  /* background-color: #f0eeee; */
 }
 
 .book-list {
-  /* overflow-y: auto;
-    height: 40rem; */
   display: flex;
   padding: 0.5rem;
   flex-wrap: wrap;

@@ -10,12 +10,11 @@
   flex-direction: column;
   padding: 1rem;
   font-size: 1rem;
-  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
-    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
   margin-bottom: 2rem;
 }
 
-.book-details > p {
+.book-details>p {
   margin-bottom: 0.8rem;
 }
 
@@ -31,6 +30,7 @@
   align-items: center;
   color: #292929;
   margin-bottom: 3rem;
+  align-self: flex-start;
 }
 
 .book-txt-content {
@@ -112,9 +112,7 @@
   width: 5rem;
 }
 
-.review-form textarea,
-option,
-input {
+.review-form textarea, option, input {
   outline: none;
   font-size: 1.1rem;
 }
@@ -128,12 +126,15 @@ input {
   display: none;
 }
 
-.review-form input,
-select,
-textarea {
+.review-form input, select, textarea {
   width: 18rem;
   border: none;
   padding: 0.5rem;
+}
+
+.reviews-title {
+  padding: 0.5rem;
+  font-size: 1.5rem;
 }
 
 .review-container {
@@ -200,13 +201,14 @@ textarea {
   position: absolute;
   right: 5px;
   top: 1px;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 780px) {
   .book-details-content {
     flex-direction: row;
     align-items: flex-start;
-    margin: auto;
+    /* margin: auto; */
   }
   .review-date {
     font-size: 1rem;
