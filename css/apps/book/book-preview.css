@@ -1,0 +1,33 @@
+.book-preview {
+  background-color: #292929;
+  padding: 1rem;
+  color: #f0eeee;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.book-preview-img {
+  width: 235px;
+  height: 315.66px;
+  object-fit: contain;
+}
+
+.book-preview-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.book-preview {
+  transition: background-color 0.3s;
+}
+
+.book-preview:hover {
+  background-color: #3d3d3d;
+}
+
+.book-preview-price {
+  text-align: center;
+  margin-top: 1rem;
+}
