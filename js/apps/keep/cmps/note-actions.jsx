@@ -1,4 +1,5 @@
 import { NoteColors } from "./note-colors.jsx"
+const { Link } = ReactRouterDOM
 
 export class NoteActions extends React.Component {
   state = {
@@ -47,6 +48,11 @@ export class NoteActions extends React.Component {
           >
             <i className="fas fa-palette"></i>
           </div>
+          <Link to={`/mail/newmail/${note.id}`}>
+            <div className="delete-card-btn note-action-btn">
+              <i className="fas fa-envelope"></i>
+            </div>
+          </Link>
           <div
             onClick={() => {
               onDeleteNote(note.id)

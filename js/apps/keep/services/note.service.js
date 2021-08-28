@@ -13,6 +13,7 @@ export const noteService = {
   changeNoteColor,
   getPlaceHolderTxt,
   formatNoteByType,
+  getNoteContentByType,
 }
 
 let gNotes = [
@@ -322,6 +323,23 @@ function getPlaceHolderTxt(noteType) {
   if (noteType === "note-video") return "Enter video URL..."
   if (noteType === "note-todos") {
     return "Enter comma separated list..."
+  }
+}
+
+function getNoteContentByType(note) {
+  if (note.type === "note-txt") {
+    return note.info.txt
+  }
+  if (note.type === "note-img" || note.type === "note-video") {
+    return note.info.url
+  }
+  if (note.type === "note-todos") {
+    let todos = []
+    note.info.todos.forEach((todo) => {
+      todos.push(todo.txt)
+    })
+    console.log(todos)
+    return todos.join(", ")
   }
 }
 
