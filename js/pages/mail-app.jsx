@@ -5,10 +5,7 @@ import { eventBusService } from "../services/event-bus-service.js"
 import { Screen } from "../apps/keep/cmps/screen.jsx"
 
 export class MailApp extends React.Component {
-  // state = {
-  //     mails: null,
-  //     filterBy: null,
-  // }
+
   state = {
     mails: null,
     filterBy: {
@@ -42,12 +39,10 @@ export class MailApp extends React.Component {
     this.setState({ filterBy: newFilterBy }, this.loadMails)
   }
 
-  onSortMailBy = (sortBy) => {
-    console.log(sortBy)
-  }
+
 
   getCurrStatus = (status) => {
-    console.log(status)
+
     this.setState(
       { filterBy: { ...this.state.filterBy, status: status } },
       () => {

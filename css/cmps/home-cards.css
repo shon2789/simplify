@@ -60,7 +60,6 @@
   margin-bottom: 1.875rem;
   font-size: 0.8rem;
   color: #292929;
-
   transition: background-color 0.3s;
 }
 
@@ -95,7 +94,6 @@
     justify-content: space-around;
     flex-direction: row;
     gap: 0;
-    /* align-items: flex-start; */
     margin-top: 4.375rem;
     width: 100%;
   }
@@ -143,58 +141,6 @@
     font-size: 1.1rem;
   }
 }
-
-/* @media (min-width: 1250px) {
-    .cards-header-title {
-        font-size: 3rem;
-    }
-    .card {
-        width: 18rem;
-        height: 19.875rem;
-    }
-    .cards-container {
-        justify-content: space-around;
-    }
-    .card svg {
-        margin-top: 1.875rem;
-        width: 4rem;
-        height: 4rem;
-    }
-    .learn-more-btn {
-        width: 8rem;
-        height: 2.5rem;
-        font-size: 1rem;
-    }
-    .card {
-        font-size: 1.1rem;
-    }
-} */
-
-/* @media (min-width: 1460px) {
-    .cards-header-title {
-        font-size: 3rem;
-    }
-    .card {
-        width: 18rem;
-        height: 19.875rem;
-    }
-    .cards-container {
-        justify-content: space-around;
-    }
-    .card svg {
-        margin-top: 1.875rem;
-        width: 4rem;
-        height: 4rem;
-    }
-    .learn-more-btn {
-        width: 8rem;
-        height: 2.5rem;
-        font-size: 1rem;
-    }
-    .card {
-        font-size: 1.1rem;
-    }
-} */
 
 @media (min-width: 1550px) {
   .cards-header-title {

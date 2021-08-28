@@ -207,7 +207,6 @@
   .book-details-content {
     flex-direction: row;
     align-items: flex-start;
-    /* margin: auto; */
   }
   .review-date {
     font-size: 1rem;

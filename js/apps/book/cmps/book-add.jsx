@@ -22,22 +22,6 @@ export class BookAdd extends React.Component {
   }
 
 
-  // handleChange = ({ target }) => {
-  //   const bookName = target.value;
-  //   this.setState({ bookName })
-  // }
-
-  // searchBook = (ev) => {
-  //   ev.preventDefault();
-  //   this.getBooksToShow();
-  //   this.setState({ bookName: '' })
-  // }
-
-  // getBooksToShow = () => {
-  //   bookService.showGoogleBooks(this.state.bookName).then((booksToShow) => {
-  //     this.setState({ booksToShow })
-  //   })
-  // }
 
   onAddBook = (book) => {
     bookService.addGoogleBook(book)

@@ -7,7 +7,6 @@ export function BookList({ books, onSelectBook }) {
         {books.map((book) => (
           <BookPreview key={book.id} book={book} />
         ))}
-        {/* {books.map(book => <BookPreview key={book.id} book={book} onSelectBook={onSelectBook} />)} */}
       </div>
     </div>
   )

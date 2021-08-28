@@ -16,13 +16,13 @@ let gEmails = [
         id: utilService.makeId(),
         from: "Jonathan",
         subject: "Auto reply!",
-        body: `“Thank you for your email! I am out of the office until 29/08/2021 . I will allow each sender one email. If you send me multiple emails, I will randomly delete your emails until it is pared down to one. Alternatively, you may contact Raz , who does not have a one-email policy for their inbox. 
+        body: `Thank you for your email! I am out of the office until 29/08/2021 . I will allow each sender one email. If you send me multiple emails, I will randomly delete your emails until it is pared down to one. Alternatively, you may contact Raz , who does not have a one-email policy for their inbox. 
 
         Please note that you already sent me one email.
         
         Sincerely, 
         
-        Jonathan” `,
+        Jonathan `,
         isRead: false,
         sentAt: 155114120594,
         to: "shon@simplify.com",
@@ -55,7 +55,7 @@ let gEmails = [
         id: utilService.makeId(),
         from: "Yohanan",
         subject: "Did you hear the news?!",
-        body: `Hi [Name]
+        body: `Hi Shon
 
         I hope you’re having a wonderful day!
         I am emailing you today to let you know we have opened doors to our iOS app development team.

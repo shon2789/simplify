@@ -15,7 +15,6 @@ export class MailSidenav extends React.Component {
     this.setState(
       { filterBy: { ...this.state.filterBy, status: value } },
       () => {
-        // this.props.onSetFilter(this.state.filterBy)
         this.props.getCurrStatus(this.state.filterBy.status)
         if (window.innerWidth < 920) this.props.exitScreen()
       }

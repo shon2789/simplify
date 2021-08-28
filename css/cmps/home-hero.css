@@ -8,8 +8,7 @@
 }
 
 .hero-img {
-  animation: rotate 3s alternate infinite ease-in-out 1s,
-    moveInLeft 1s ease-in-out;
+  animation: rotate 3s alternate infinite ease-in-out 1s, moveInLeft 1s ease-in-out;
 }
 
 .hero-img svg {
@@ -18,12 +17,10 @@
 }
 
 .hero-container {
-  /* padding-top: 5rem; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  /* align-items: center; */
 }
 
 .left-container {
@@ -57,8 +54,7 @@
 .see-more-btn:active {
   transform: translateY(-1px);
   transition: transform 0.3s;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
-    rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
 }
 
 .dot {
@@ -121,13 +117,11 @@
   .hero-text {
     font-size: 3rem;
   }
-
   .see-more-btn {
     font-size: 1.2rem;
     width: 10rem;
     height: 2.75rem;
   }
-
   .hero-img svg {
     width: 18rem;
     height: 18rem;
@@ -174,25 +168,19 @@
     height: 2.75rem;
     margin-top: 1rem;
   }
-
   .dot {
     font-size: 4rem;
   }
-  /* .hero-container {
-        padding-top: 0;
-    } */
 }
 
 @media (min-width: 1250px) {
   .hero-text {
     font-size: 3rem;
   }
-
   .hero-img svg {
     width: 24rem;
     height: 24rem;
   }
-
   .see-more-btn {
     font-size: 1.2rem;
     width: 12.75rem;
@@ -204,27 +192,11 @@
   }
 }
 
-@media (min-width: 1460px) {
-  /* .hero-text {
-        font-size: 3rem;
-    }
-    .see-more-btn {
-        font-size: 1.2rem;
-        width: 12.75rem;
-        height: 2.75rem;
-        margin-top: 1rem;
-    }
-    .dot {
-        font-size: 4rem;
-    } */
-}
-
 @media (min-width: 1550px) {
   .hero-text {
     font-size: 3.6125rem;
     margin-top: 0;
   }
-
   .hero-img svg {
     width: 30rem;
     height: 30rem;
@@ -252,8 +224,7 @@
     animation: moveInRight 1s ease-in-out;
   }
   .hero-img {
-    animation: rotate 3s alternate infinite ease-in-out 1s,
-      moveInLeft 1s ease-in-out;
+    animation: rotate 3s alternate infinite ease-in-out 1s, moveInLeft 1s ease-in-out;
   }
   .hero-img path {
     width: 30rem;
@@ -287,8 +258,7 @@
   .see-more-btn:active {
     transform: translateY(-1px);
     transition: transform 0.3s;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
-      rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
   }
   .dot {
     color: #f2c16b;

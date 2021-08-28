@@ -53,7 +53,6 @@ export class MailPreview extends React.Component {
                             <p className="mail-sent-time-preview">{utilService.getFormattedDate(mail.sentAt)}</p>
                         </div>
                     </section>
-                    {/* {isReading && <div className="mail-body">{mail.body}</div>} */}
                 </section>
             </Link>
 

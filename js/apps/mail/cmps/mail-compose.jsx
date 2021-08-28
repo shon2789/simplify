@@ -1,4 +1,4 @@
-import { utilService } from "../../../services/util.service.js"
+
 import { noteService } from "../../keep/services/note.service.js"
 import { mailService } from "../sevices/mail.service.js"
 
@@ -46,8 +46,6 @@ export class MailCompose extends React.Component {
   }
 
   onBack = () => {
-    // mailService.sendMail(this.state.mail, true).then(() => {
-    // })
     this.props.history.push("/mail")
 
   }
@@ -56,7 +54,6 @@ export class MailCompose extends React.Component {
     const { mail } = this.state
     return (
       <section className="mail-compose main-layout">
-        {/* <i onClick={this.onBack} className="go-back-compose fas fa-arrow-left"></i> */}
         <div onClick={this.onBack} className="go-back-container-compose">
           <i className="go-back fas fa-arrow-left"></i>
           <div className="go-back-text">Go Back</div>

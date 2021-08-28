@@ -19,10 +19,6 @@
   align-items: center;
 }
 
-#new-book {
-  /* margin-bottom: 1.5rem; */
-}
-
 .form-container .form input {
   outline: none;
 }
@@ -71,7 +67,6 @@
 
 .search-book-btn {
   cursor: pointer;
-  /* margin-left: 1rem; */
   padding: 0.5rem;
   border: none;
   background-color: #f2c16b;

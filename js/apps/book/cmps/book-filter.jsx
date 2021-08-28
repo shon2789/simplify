@@ -23,7 +23,7 @@ export class BookFilter extends React.Component {
     const { name, minPrice, maxPrice } = this.state.filterBy
     return (
       <div className="form-container">
-        {/* <h2>Filter By:</h2> */}
+
         <form className="form">
           <input
             name="name"
